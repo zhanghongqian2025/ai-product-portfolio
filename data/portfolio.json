@@ -27,6 +27,13 @@
       "fullName": "北京赋界科技有限公司",
       "shortIntro": "官网 · 5 个解决方案 · 5 款 AI 产品",
       "productDelivery": "北京赋界科技的产品由我独立开发完成。"
+    },
+    {
+      "id": "thunisoft",
+      "name": "华宇信息",
+      "fullName": "北京华宇信息技术有限公司",
+      "shortIntro": "刑事证据智能分析 · 法院自助诉讼服务",
+      "productDelivery": "我主要负责睿证刑事证据智能分析系统和诉讼服务一体机两款产品。"
     }
   ],
   "projects": [
@@ -1410,6 +1417,86 @@
         {
           "file": "assets/official/fujie-legal-leads-20261008.jpg",
           "title": "法律案源线索产品介绍"
+        }
+      ]
+    },
+    {
+      "id": "thunisoft-ruizheng",
+      "company": "thunisoft",
+      "type": "software",
+      "title": "睿证刑事证据智能分析系统",
+      "summary": "面向刑事办案人员，围绕证据整理、审查与全案分析，提供证据归目、缺失提醒、笔录对比和证据链审查等辅助能力。",
+      "statusLabel": "刑事证据分析",
+      "statusTone": "partial",
+      "cardNote": "证据整理与审查辅助",
+      "problem": "刑事案件证据类型多、材料量大，办案人员需要核对证据完整性、发现瑕疵与矛盾，并按统一标准审查证据和办案程序。",
+      "solution": [
+        "采用组件式构建，可与业务协同平台或办案业务系统结合，辅助办案人员开展证据审查。",
+        "识别证据并归目，提示缺失材料，辅助审查非法证据与瑕疵证据。",
+        "提供类案证据和证据标准指引，支持笔录对比分析与程序合法性审查。",
+        "组织证据链与全案证据审查，帮助办案人员梳理证据之间的关系。"
+      ],
+      "audience": "刑事办案人员 公检法",
+      "keywords": "华宇信息 睿证 刑事 证据 智能分析 审查 归目 笔录 证据链",
+      "links": [
+        {
+          "label": "查看睿证官方介绍",
+          "url": "https://www.thunisoft.com/znfxxt.jhtml#skip_1"
+        },
+        {
+          "label": "访问华宇信息官网",
+          "url": "https://www.thunisoft.com/"
+        }
+      ],
+      "relatedIds": [
+        "thunisoft-litigation-terminal"
+      ],
+      "media": [
+        {
+          "file": "assets/official/thunisoft-ruizheng-20261008.jpg",
+          "title": "睿证官方产品介绍页面"
+        }
+      ]
+    },
+    {
+      "id": "thunisoft-litigation-terminal",
+      "company": "thunisoft",
+      "type": "terminal",
+      "title": "诉讼服务一体机",
+      "summary": "法院自助服务终端，面向当事人提供自助立案、案件查询和材料收转等诉讼服务，具体功能以当地法院部署为准。",
+      "statusLabel": "法院自助服务",
+      "statusTone": "partial",
+      "cardNote": "诉讼服务中心与自助服务区",
+      "problem": "当事人办理立案、查询案件和提交材料等事项时，需要便捷的现场入口，减少常见事务对人工窗口和工作时间的依赖。",
+      "solution": [
+        "自助立案：通过身份证与人脸识别完成身份验证，填写立案信息、扫描上传材料，部分部署支持要素式立案。",
+        "案件查询：通过案号或身份信息查看案件进展、开庭公告等信息。",
+        "材料收转：提交诉讼材料、签收文书，部分设备连接材料收转云柜，支持自助取件。",
+        "联系与缴费：部分终端支持给法官留言、网上缴费及打印缴费凭证。",
+        "智能辅助：部分型号提供智能诉状生成、诉讼风险评估与法律法规查询等辅助服务。"
+      ],
+      "accessNotes": [
+        "使用地点包括法院诉讼服务中心、部分法院的 24 小时自助服务区，以及部分基层法庭。",
+        "准备本人有效身份证，多数设备需要读取二代身份证并进行人脸识别。",
+        "准备案号、当事人姓名与联系方式等案件信息，以及起诉状、证据材料的电子版或纸质件，部分设备支持现场扫描。",
+        "设备型号、开放功能与可用时间因法院部署而异，前往使用前可咨询当地法院诉讼服务中心。"
+      ],
+      "audience": "诉讼当事人 法院诉讼服务中心 基层法庭",
+      "keywords": "华宇信息 一体机 自助终端 诉讼服务 立案 案件查询 材料收转 文书 缴费",
+      "links": [
+        {
+          "label": "访问华宇信息官网",
+          "url": "https://www.thunisoft.com/"
+        }
+      ],
+      "relatedIds": [
+        "thunisoft-ruizheng"
+      ],
+      "mediaKind": "product-photo",
+      "media": [
+        {
+          "file": "assets/official/thunisoft-litigation-terminal.png",
+          "title": "诉讼服务一体机现场照片"
         }
       ]
     }
