@@ -3,7 +3,7 @@ const $ = (s) => document.querySelector(s);
 const esc = (v = '') => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const external = (url) => { try { const u = new URL(url); return u.protocol === 'https:' ? u.href : null; } catch { return null; } };
 const localAsset = (path) => typeof path === 'string' && /^assets\/[a-zA-Z0-9/_\.\-]+$/.test(path) && !path.includes('..') ? path : '';
-const typeNames = {platform:'平台',agent:'智能体集',app:'移动应用',miniprogram:'微信小程序',website:'官网',solution:'解决方案',product:'AI 产品'};
+const typeNames = {platform:'平台',agent:'智能体集',app:'移动应用',miniprogram:'微信小程序',website:'官网',solution:'解决方案',product:'AI 产品',software:'专业软件',terminal:'自助终端'};
 let data, companyFilter = 'all', typeFilter = 'all', search = '', gallery = [], imageIndex = 0, lastImageTrigger;
 const lightbox = $('#lightbox');
 function status(item) { return `<span class="status ${esc(item.statusTone || '')}">${esc(item.statusLabel)}</span>`; }
@@ -12,7 +12,7 @@ function mediaMarkup(item) {
   const images = asset(item);
   if (item.type === 'miniprogram') return `<div class="mini-visual"><span>WEIXIN MINI PROGRAM</span><strong>包晴天<br>微信小程序</strong><small>微信法律服务入口 · 此处为文字展示，非界面截图</small></div>`;
   if (images.length && item.type === 'app') return `<div class="card-media apps ${item.id.includes('lawyer') ? 'lawyer' : ''}">${images.slice(0,2).map(m => `<img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy" width="600" height="1300">`).join('')}<span class="media-label">官方 App Store 产品图</span></div>`;
-  if (images.length) return `<div class="card-media website"><img src="${esc(images[0].file)}" alt="${esc(images[0].title)}" loading="lazy" width="1280" height="720"><span class="media-label">${item.mediaKind === 'product-ui' ? '产品页面 · 实际截图' : '官方介绍页 · 实际截图'}</span></div>`;
+  if (images.length) return `<div class="card-media website ${item.mediaKind === 'product-photo' ? 'product-photo' : ''}"><img src="${esc(images[0].file)}" alt="${esc(images[0].title)}" loading="lazy" width="1280" height="720"><span class="media-label">${item.mediaKind === 'product-photo' ? '产品现场照片' : item.mediaKind === 'product-ui' ? '产品页面 · 实际截图' : '官方介绍页 · 实际截图'}</span></div>`;
   return `<div class="agent-visual"><span class="visual-index">${esc(item.visualLabel || typeNames[item.type])}</span><strong>${esc(item.visualTitle || item.title)}</strong><small>${item.pending ? '素材待补 · 此处为视觉占位' : '场景索引 · 此处为文字示意，非产品界面'}</small></div>`;
 }
 function wechatMarkup(item) {
