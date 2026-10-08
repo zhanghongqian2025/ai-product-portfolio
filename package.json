@@ -1,1 +1,1 @@
-{"name":"zhang-hongqian-portfolio","private":true,"version":"1.0.0","type":"module","scripts":{"start":"node scripts/server.mjs","check":"node scripts/validate.mjs"}}
+{"name":"zhang-hongqian-portfolio","private":true,"version":"1.0.0","type":"module","scripts":{"start":"node scripts/server.mjs","check":"node scripts/validate.mjs","build":"node scripts/build.mjs"}}

@@ -28,6 +28,6 @@ npm start
 
 ## 内容维护
 
-产品内容位于 `data/portfolio.json`，图片位于 `assets/`。公司分工和代表智能体内容可直接更新 JSON。
+产品内容位于 `data/portfolio.json`，图片位于 `assets/`。公司分工和代表智能体内容可直接更新 JSON。修改后运行 `npm run check` 和 `npm run build`，将生成的发布文件与 `index.html` 一并提交。发布文件名包含内容摘要，可避免更新后继续读取旧的程序或成果清单。
 
 产品截图与商店素材的版权归原权利人。本项目用于个人作品展示，不包含客户资料、账号凭据或内部审阅材料。
