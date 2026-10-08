@@ -9,7 +9,7 @@ http.createServer(async(req,res)=>{
   try {
     const url = new URL(req.url,'http://127.0.0.1');
     const requested = decodeURIComponent(url.pathname);
-    const allowed = requested==='/' || ['/index.html','/styles.css','/app.js'].includes(requested) || /^\/(assets|data)\//.test(requested);
+    const allowed = requested==='/' || ['/index.html','/styles.css','/app.js'].includes(requested) || /^\/app-[a-f0-9]+\.js$/.test(requested) || /^\/(assets|data)\//.test(requested);
     if(!allowed || requested.split('/').includes('..')) {res.writeHead(404);res.end('Not found');return;}
     const file = path.resolve(root, '.'+(requested==='/'?'/index.html':requested));
     if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}
