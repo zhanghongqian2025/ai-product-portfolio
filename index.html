@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="张洪千的个人 AI 产品作品集：百鉴平台、包晴天双端与赋界科技产品及解决方案。">
+  <title>张洪千 AI 产品与交付作品集</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a href="#main" class="skip-link">跳到主要内容</a>
+<header class="site-header">
+  <div class="header-inner"><a href="#top" class="brand" aria-label="张洪千作品集首页"><span class="brand-mark">Z<span>H</span></span><span>张洪千<small>AI 产品与交付</small></span></a>
+  <nav aria-label="主要导航"><a href="#works">成果作品</a></nav></div>
+</header>
+<main id="main">
+<div id="home-view">
+<section class="hero wrap" id="top">
+  <div class="hero-copy"><p class="eyebrow"><span class="tiny-dot"></span> PERSONAL PRODUCT PORTFOLIO</p>
+  <p class="hero-name">张洪千 / 法律科技 · AI 产品</p>
+  <h1>把专业服务<br>做成<span class="ink-accent">可用的<br class="mobile-only"> AI 产品</span></h1>
+  <p class="hero-description">从法律业务与真实用户问题出发，连接产品规划、<br class="desktop-only">智能应用和交付实践。</p>
+  <div class="hero-actions"><a href="#works" class="button primary">浏览成果作品 <span>↘</span></a></div>
+  <div class="hero-foot"><span>平台 · 移动应用 · 解决方案</span></div></div>
+  <div class="hero-gallery" aria-label="公开产品素材精选">
+    <a href="#work/baijian" class="hero-window"><div class="window-top"><span class="window-dots">● ● ●</span><span>百鉴 · 企业出海专业服务</span><span>↗</span></div><img src="assets/official/baijian-official-20261008.jpg" alt="百鉴官网实际截图：企业出海，选百融百鉴" width="1280" height="720"><span class="material-caption">官方介绍页 · 实际截图</span></a>
+    <div class="hero-phone-set"><a href="#work/baoqingtian" class="hero-phone"><img src="assets/official/baoqingtian-1.webp" width="600" height="1300" alt="包晴天官方 App Store 产品介绍图"></a><a href="#work/baoqingtian-lawyer" class="hero-phone lawyer"><img src="assets/official/lawyer-1.webp" width="600" height="1300" alt="包晴天律师端官方 App Store 产品介绍图"></a><p>包晴天 · 用户与律师双端<br><span>官方商店素材 / 点击查看成果</span></p></div>
+    <span class="gallery-note">真实产品，真实来源。</span>
+  </div>
+</section>
+
+<section class="works-section wrap" id="works">
+  <div class="section-heading"><div><p class="eyebrow">SELECTED WORK & PRODUCT COLLECTION</p><h2>成果作品</h2></div></div>
+  <div class="filters"><div id="company-filters" class="filter-buttons" role="group" aria-label="按公司筛选"></div><div class="filter-tools"><label class="select-label"><span class="sr-only">成果类型</span><select id="type-filter"><option value="all">全部类型</option><option value="platform">平台</option><option value="agent">智能体集</option><option value="app">移动应用</option><option value="miniprogram">微信小程序</option><option value="website">官网</option><option value="solution">解决方案</option><option value="product">AI 产品</option></select></label><label class="search-label"><span aria-hidden="true">⌕</span><input id="search" type="search" aria-label="搜索成果" placeholder="搜索产品或场景" autocomplete="off"></label></div></div>
+  <div class="results-line"><p id="result-label" aria-live="polite"></p><button id="reset-filters" class="plain-button" hidden>清除筛选 ↺</button></div>
+  <div id="collection"><p class="loading">正在加载成果内容…</p></div>
+  <div id="empty-state" hidden><span>⌕</span><h3>暂未找到匹配的成果</h3><p>试试其他关键词，或清除筛选查看全部作品。</p><button class="button secondary" id="empty-reset">查看全部成果</button></div>
+</section>
+
+
+
+</div>
+<section id="detail-view" class="detail wrap" hidden aria-labelledby="detail-title"></section>
+<section id="load-error" class="wrap error-message" hidden><h2>内容未能加载</h2><p>请通过项目说明中的本地预览地址打开，并确认 data/portfolio.json 可访问。</p><button class="button primary" id="reload">重新加载</button></section>
+</main>
+<footer class="site-footer"><div class="wrap"><a class="footer-name" href="#top">张洪千 <span>产品与交付作品集</span></a><p>素材版权归各权利人</p><a href="#top">回到首页 ↑</a></div></footer>
+<dialog id="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><h2 id="lightbox-title">素材预览</h2><button class="close-button" id="lightbox-close" aria-label="关闭素材预览">✕</button></div><div class="lightbox-image"><img id="lightbox-img" alt=""></div><div class="lightbox-footer"><button id="prev-image" aria-label="上一张素材">←</button><p id="lightbox-caption"></p><button id="next-image" aria-label="下一张素材">→</button></div></dialog>
+<noscript><p class="wrap">本页面需要启用 JavaScript 来加载成果清单与详情。源文件与完整内容见项目 data 文件。</p></noscript>
+</body></html>

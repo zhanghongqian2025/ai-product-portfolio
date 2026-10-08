@@ -1,0 +1,1417 @@
+{
+  "schemaVersion": 1,
+  "companies": [
+    {
+      "id": "bairong",
+      "name": "百融云创",
+      "fullName": "百融云创科技股份有限公司",
+      "shortIntro": "百鉴平台 · 116 个智能体 · 按集展示",
+      "achievement": {
+        "value": "116",
+        "unit": "个",
+        "label": "累计开发智能体",
+        "description": "按十个智能体集组织开发成果"
+      },
+      "productDelivery": "百融云创的产品由我带领 6 人产品交付团队完成。"
+    },
+    {
+      "id": "qile",
+      "name": "齐乐无穷",
+      "fullName": "北京齐乐无穷文化科技有限公司",
+      "shortIntro": "用户端 · 律师端 · 微信小程序",
+      "productDelivery": "齐乐无穷的产品由我带领 30 人产品研发团队完成。"
+    },
+    {
+      "id": "fujie",
+      "name": "赋界科技",
+      "fullName": "北京赋界科技有限公司",
+      "shortIntro": "官网 · 5 个解决方案 · 5 款 AI 产品",
+      "productDelivery": "北京赋界科技的产品由我独立开发完成。"
+    }
+  ],
+  "projects": [
+    {
+      "id": "baijian",
+      "company": "bairong",
+      "type": "platform",
+      "title": "百鉴专业服务平台",
+      "summary": "累计开发 116 个智能体，覆盖企业出海与跨境专业服务。百鉴连接企业需求、AI 与专业人士，支持法商财税服务协作。",
+      "statusLabel": "公开平台可访问",
+      "statusTone": "",
+      "cardNote": "累计开发 116 个 / 按集展示",
+      "audience": "企业出海客户、专业服务机构",
+      "problem": "企业跨境业务需要协调不同法域和专业领域，需求识别、专业资源匹配与项目协作分散在多个环节。",
+      "solution": [
+        "以平台承载专业服务需求和资源匹配，连接 AI 初步分析与专业人员审核。",
+        "围绕投资、落地、经营和退出阶段组织法商财税事项；产品定位以当前官方介绍为准。"
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-collections-20261008.jpg",
+          "title": "百鉴平台场景智能体集"
+        },
+        {
+          "file": "assets/official/baijian-live-agents-directory-20261008.jpg",
+          "title": "百鉴专业智能体目录"
+        },
+        {
+          "file": "assets/official/baijian-platform-20261008.jpg",
+          "title": "百鉴专业服务平台首页实际截图"
+        },
+        {
+          "file": "assets/official/baijian-official-20261008.jpg",
+          "title": "百鉴官网首页实际截图"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看平台智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "label": "访问百鉴专业服务平台",
+          "url": "https://baijianai.com/"
+        }
+      ],
+      "keywords": "AI 法商财税 专业服务 出海 需求 平台",
+      "publicContribution": [
+        "累计开发 116 个百鉴智能体，按智能体集组织开发成果。",
+        "围绕出海与跨境专业服务开展需求调研，拆解输入材料、处理步骤、报告输出和专业复核环节。",
+        "参与客户方案、演示与交付验证，梳理资料来源、版本及权限边界。"
+      ],
+      "platformCollections": [
+        {
+          "title": "巴西出海智能体集",
+          "description": "面向计划进入、落地和经营巴西市场的企业，聚合市场、架构、资本与知识产权服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=brazil"
+        },
+        {
+          "title": "东南亚国别投资智能体集",
+          "description": "面向计划进入和落地东南亚市场的企业，聚合国别投资、外资准入、土地投资与知识产权服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "拉美国别投资智能体集",
+          "description": "面向计划进入、落地和经营拉美市场的企业，聚合国别投资与外资合规服务，并提供巴西税务、用工与知识产权支持。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "欧洲国别投资智能体集",
+          "description": "面向计划进入和投资欧洲市场的企业，聚合国别投资咨询、外资准入与投资合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "非洲国别投资智能体集",
+          "description": "面向计划进入和投资非洲市场的企业，聚合国别投资咨询、外资准入与投资合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "中东国别投资智能体集",
+          "description": "面向计划进入和投资中东市场的企业，聚合国别投资咨询、外资准入与投资合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "北美出海智能体集",
+          "description": "面向布局北美市场的企业，聚合美国知识产权、房地产投资与电力系统咨询，以及加拿大外资合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "全球投资咨询智能体集",
+          "description": "面向开展全球投资布局的企业，聚合多国投资咨询、外资准入与投资合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=global-investment"
+        },
+        {
+          "title": "知识产权智能体集",
+          "description": "面向开展海外技术与品牌布局的企业，聚合多个国家和地区的专利保护与商标保护服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=intellectual-property"
+        },
+        {
+          "title": "跨境税务智能体集",
+          "description": "面向涉及跨境经营与资产安排的企业及个人，聚合税务居民身份判断、CRS信息交换分析与科技集团税收优惠规划服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=cross-border-taxation"
+        },
+        {
+          "title": "出海架构与资本市场智能体集",
+          "description": "面向开展跨境投资与资本布局的企业及投资者，聚合投资选址、跨境架构、ODI备案、基金与信托设立及股权安排服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=overseas-framework"
+        },
+        {
+          "title": "国际关税与贸易合规智能体集",
+          "description": "面向开展进出口与跨境贸易的企业，聚合原产地认定、出口管制、海关稽查、关税争议与走私风险应对服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "企业合规与风控智能体集",
+          "description": "面向开展跨境经营的企业，聚合贿赂风险分析、反贿赂体系建设、商业秘密保护与隐私合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter"
+        },
+        {
+          "title": "境外土地投资智能体集",
+          "description": "面向开展境外土地与房地产投资的企业及投资者，聚合东南亚土地投资分析与美国房地产投资、选址服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=land-investment"
+        },
+        {
+          "title": "其他",
+          "description": "面向具有多国投资与跨境经营需求的企业，聚合国别投资、知识产权、争议解决、破产风险与用工合规服务。",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=other"
+        }
+      ],
+      "mediaKind": "product-ui"
+    },
+    {
+      "id": "baijian-overseas",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "企业出海智能体集",
+      "summary": "按出海全生命周期组织战略决策、目的地选择、架构搭建、合规落地、运营管理与争议退出场景。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "企业出海",
+      "audience": "开展海外投资与经营的企业",
+      "problem": "开展海外投资与经营的企业需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "将出海前期决策、市场与选址、投资架构和落地合规串联成业务流程。",
+        "衔接海外用工、财税运营、争议解决与退出事项。"
+      ],
+      "links": [
+        {
+          "label": "查看平台对应智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=brazil"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 企业出海智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "企业跨境投资选址分析",
+          "description": "以企业行业、发展目标和约束条件为起点，对候选国家和地区进行多维度比较。",
+          "input": "企业业务、行业、战略目标、合规要求及投资偏好",
+          "output": "需求权重、目的地比较与海外选址解决方案初案",
+          "url": "https://baijianai.com/ai-agent/intro/site-selection"
+        },
+        {
+          "title": "ODI备案资料智能生成",
+          "description": "先判断境外直接投资的合规条件，再匹配申请材料模板。",
+          "input": "投资主体、境外项目和交易安排",
+          "output": "备案申请文件草稿和材料准备清单",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "出口管制智能体",
+          "description": "围绕货物、技术与服务出口，以分步问答组织出口前、出口中及出口后的合规分析。",
+          "input": "出口标的、交易安排和所处环节",
+          "output": "风险评估报告和分阶段应对建议",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-set-0-20261008.jpg",
+          "title": "巴西出海智能体集页面"
+        },
+        {
+          "file": "assets/official/baijian-live-intro-site-20261008.jpg",
+          "title": "企业跨境投资选址分析介绍页"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-country",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "国别投资咨询与报告智能体集",
+      "summary": "围绕目标市场的投资环境、市场准入和项目风险，组织咨询与报告能力。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "国别投资",
+      "audience": "计划开展海外投资的企业",
+      "problem": "计划开展海外投资的企业需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "按国别组织投资咨询与外商投资合规分析，覆盖准入、设立、土地、外汇、用工、环保和税务。",
+        "结合拟投资行业、交易和项目问题，整理法规依据、合规建议与前期风险分析。"
+      ],
+      "links": [
+        {
+          "label": "查看平台对应智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=global-investment"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 国别投资咨询与报告智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "新加坡外商投资合规分析",
+          "description": "围绕投资准入、主体设立、土地资产、外汇、用工、环保与税务七个模块分析项目。",
+          "input": "目标行业、拟开展业务和投资项目资料",
+          "output": "投资前合规分析和风险排查参考",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "新加坡投资咨询",
+          "description": "根据业务场景和交易问题，检索当地法规、监管要求与实务规则。",
+          "input": "计划投资行业、交易安排或具体问题",
+          "output": "附法规依据的咨询分析与合规建议",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "巴西外商投资合规分析",
+          "description": "将巴西投资项目中的准入、设立、资金、土地、用工、环保与税务事项整合分析。",
+          "input": "拟投资行业、主体安排和项目情况",
+          "output": "项目合规分析与筹备事项参考",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-set-7-20261008.jpg",
+          "title": "全球投资咨询智能体集页面"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-labor",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "海外劳动法智能体集",
+      "summary": "围绕巴西劳动法咨询与跨境劳务外包，连接雇佣、合同、工时薪酬、人员资质、签证税务社保和争议处理。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "海外劳动法",
+      "audience": "海外经营企业的人力与法务团队",
+      "problem": "海外经营企业的人力与法务团队需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "以具体用工问题为输入，检索巴西法规、案例与问答，区分法定规则和个案判例。",
+        "跨境劳务外包同时考虑派出国与东道国的主体资质、合同、签证、税务社保及流程要求。"
+      ],
+      "links": [
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 海外劳动法智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "巴西劳动法咨询智能体",
+          "description": "面向 HR、法务与管理人员，处理雇佣、合同、工时薪酬、休假、解雇和劳动争议问题。",
+          "input": "用工场景、合同情况和具体咨询问题",
+          "output": "基于法规和案例的咨询分析，区分规则与个案",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "跨境劳务外包合规分析",
+          "description": "同时考虑派出国与东道国要求，梳理主体资质、合同、签证、税务社保与争议风险。",
+          "input": "外包主体、合同、跨境人员及工作流程",
+          "output": "外包合规风险排查与应对思路",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-labor-directory-20261008.jpg",
+          "title": "海外劳动法咨询系列页面"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-ip",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "知识产权智能体集",
+      "summary": "围绕海外商标、专利与外观设计，组织申请流程、材料检查和维权指引。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "知识产权",
+      "audience": "需要海外品牌与创新保护的企业",
+      "problem": "需要海外品牌与创新保护的企业需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "围绕目标国家和地区组织专利、商标申请路径、文件准备、审查、优先权与费用等咨询。",
+        "聚合新加坡、日本、马来西亚、中国香港、美国及巴西的知识产权场景；代理申请由相应专业服务承接。"
+      ],
+      "links": [
+        {
+          "label": "查看平台对应智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=intellectual-property"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 知识产权智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "新加坡专利保护智能体",
+          "description": "解答专利申请路径、文件准备、加速通道、优先权、授权登记与费用等问题。",
+          "input": "技术成果、目标申请路径及申请问题",
+          "output": "专利申请流程与材料准备咨询",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "巴西商标保护智能体",
+          "description": "覆盖分类查询、申请、文件准备、审查、公告异议、续展转让及本地代理要求。",
+          "input": "品牌与商标情况、目标类别及申请问题",
+          "output": "商标保护流程和材料准备参考",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-set-8-20261008.jpg",
+          "title": "知识产权智能体集页面"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-canada",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "加拿大移民与留学智能体集",
+      "summary": "围绕加拿大移民政策、申请流程及教育职业规划，组织咨询场景。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "按产品手册系列归集",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "加拿大\n移民与留学",
+      "audience": "具有移民、留学及教育规划需求的用户",
+      "problem": "具有移民、留学及教育规划需求的用户需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "提供移民政策解读与申请流程指引。",
+        "衔接教育、职业发展及家庭教育规划事项。"
+      ],
+      "links": [
+        {
+          "label": "访问百鉴专业服务平台",
+          "url": "https://baijianai.com/"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 加拿大移民与留学智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ]
+    },
+    {
+      "id": "baijian-data",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "跨境数据合规智能体集",
+      "summary": "以欧盟隐私与数据保护场景为切入点，支持法规、监管动态与执法案例的检索、整理和分析。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "跨境数据合规",
+      "audience": "开展跨境业务的企业及数据合规团队",
+      "problem": "开展跨境业务的企业及数据合规团队需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "围绕企业出海隐私合规问题，组织欧盟相关法规、监管动态与执法案例研究。",
+        "将资料整理与分析结果用于内部决策、业务评估和合规建设参考。"
+      ],
+      "links": [
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 跨境数据合规智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "企业出海隐私合规",
+          "description": "支持欧盟隐私合规研究，连接法律法规、监管动态与执法案例的检索和分析。",
+          "input": "企业跨境业务场景及隐私合规问题",
+          "output": "规则整理、案例分析和潜在风险参考",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-privacy-directory-20261008.jpg",
+          "title": "企业出海隐私合规产品页面"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-tax",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "跨境税务智能体集",
+      "summary": "聚合个人与企业税务居民身份判断及 CRS 信息交换分析，连接身份、账户与跨境资产安排。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "跨境税务",
+      "audience": "跨境经营企业与涉外税务需求方",
+      "problem": "跨境经营企业与涉外税务需求方需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "结合个人家庭、资产、业务与生活重心，以及企业经营管理情况，分析税务居民身份。",
+        "梳理账户与资产持有架构，识别 CRS 申报和信息交换风险，组织合规遵从方案初案。"
+      ],
+      "links": [
+        {
+          "label": "查看平台对应智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=cross-border-taxation"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 跨境税务智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "个人税务居民身份判断",
+          "description": "结合家庭、资产、业务与生活重心，比较多地税法与税收协定，形成身份规划初案。",
+          "input": "家庭与资产、业务与生活重心、停留情况及未来方向",
+          "output": "个人税收居民身份解决方案建议书初案",
+          "url": "https://baijianai.com/ai-agent/intro/tax-resident"
+        },
+        {
+          "title": "企业税务居民身份判断",
+          "description": "分析企业的税务居民归属、实际管理机构与跨境税务风险。",
+          "input": "企业设立、经营管理与跨境业务情况",
+          "output": "税务居民身份分析与风险管理参考",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "CRS信息交换分析",
+          "description": "梳理跨境账户及资产架构，分析信息交换、申报遗漏、身份与披露口径风险。",
+          "input": "金融账户、持有架构、居民身份及全球业务布局",
+          "output": "CRS 合规遵从解决方案建议书初案",
+          "url": "https://baijianai.com/ai-agent/intro/crs"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-set-9-20261008.jpg",
+          "title": "跨境税务智能体集页面"
+        },
+        {
+          "file": "assets/official/baijian-live-intro-tax-20261008.jpg",
+          "title": "个人税务居民身份规划介绍页"
+        },
+        {
+          "file": "assets/official/baijian-live-intro-crs-20261008.jpg",
+          "title": "CRS 合规遵从介绍页"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-finance",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "跨境架构智能体集",
+      "summary": "围绕海外投资架构、管控平台与离岸信托搭建，组织跨境投资的专业分析流程。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "跨境架构",
+      "audience": "需要设计与管理海外投资架构的企业",
+      "problem": "需要设计与管理海外投资架构的企业需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "组织投资架构设计、管控平台选型与信托架构规划。",
+        "围绕材料输入、证据状态和专业复核组织分析与输出。"
+      ],
+      "links": [
+        {
+          "label": "查看平台对应智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=overseas-framework"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 跨境架构智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "跨境架构 海外投资管控平台选择",
+          "description": "结合企业现状、未来规划和目标市场，比较海外投资管控平台。",
+          "input": "企业基础情况、发展规划和目标市场",
+          "output": "投资管控平台选择与架构安排参考",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "离岸信托架构设计与搭建",
+          "description": "比较离岸法域和信托架构模式，连接家族画像、资产保护、治理与合规安排。",
+          "input": "家族与资产情况、持有结构和传承目标",
+          "output": "离岸家族信托架构设计方案建议书初案",
+          "url": "https://baijianai.com/ai-agent/intro/offshore-trust"
+        },
+        {
+          "title": "ODI备案资料智能生成",
+          "description": "先判断境外直接投资的合规条件，再匹配申请材料模板。",
+          "input": "投资主体、境外项目和交易安排",
+          "output": "备案申请文件草稿和材料准备清单",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-set-10-20261008.jpg",
+          "title": "出海架构与资本市场智能体集页面"
+        },
+        {
+          "file": "assets/official/baijian-live-intro-trust-20261008.jpg",
+          "title": "离岸信托架构设计介绍页"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-litigation",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "跨境诉讼智能体集",
+      "summary": "围绕跨境争议的管辖、商事纠纷初步分析，以及内地与香港之间的保全和执行，组织案件准备任务。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "跨境诉讼",
+      "audience": "面临海外劳动争议的企业与专业人员",
+      "problem": "面临海外劳动争议的企业与专业人员需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "根据合同、争议主体、案件事实和阶段，分析诉讼与仲裁管辖及解决路径。",
+        "形成纠纷定性、证据、责任与时效分析，并准备内地与香港的保全、认可执行事项。"
+      ],
+      "links": [
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 跨境诉讼智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "跨境争议管辖权分析",
+          "description": "区分诉讼与仲裁，分析争议解决条款、仲裁协议效力及法院管辖。",
+          "input": "争议主体、合同条款、争议类型和相关地点",
+          "output": "争议解决类型及管辖路径分析",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "商事争议解决方案",
+          "description": "以标准化流程采集案件事实、合同、履行、焦点、进展与诉求。",
+          "input": "案件事实、合同文件、履行情况和当事人诉求",
+          "output": "纠纷定性、责任、时效、证据与诉讼仲裁策略初步报告",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "跨境保全与执行分析",
+          "description": "针对内地与香港民商事纠纷，分析保全及判决或仲裁裁决的认可执行路径。",
+          "input": "案件类型、所处阶段、案情和财产情况",
+          "output": "适用路径、材料清单、时间费用参考与风险提示",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-dispute-directory-20261008.jpg",
+          "title": "争议解决系列页面"
+        },
+        {
+          "file": "assets/official/baijian-live-set-14-20261008.jpg",
+          "title": "跨境争议专业智能体所在集合页面"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baijian-land",
+      "company": "bairong",
+      "parent": "baijian",
+      "type": "agent",
+      "title": "跨境土地投资智能体集",
+      "summary": "连接东南亚土地投资与美国房地产投资选址，围绕产权、用途、项目条件和当地规则组织分析。",
+      "statusLabel": "智能体集",
+      "statusTone": "",
+      "cardNote": "专业场景与代表智能体",
+      "visualLabel": "BAIJIAN / AGENT COLLECTION",
+      "visualTitle": "跨境土地投资",
+      "audience": "开展海外土地与建厂项目的企业",
+      "problem": "开展海外土地与建厂项目的企业需要把分散的专业问题整理为明确的资料输入、处理任务和可复核的输出。",
+      "solution": [
+        "针对目的地土地法律环境和企业投资意向，分析产权取得、用途与项目合规条件。",
+        "将土地投资及房地产选址分析整理为风险评估和项目准备参考。"
+      ],
+      "links": [
+        {
+          "label": "查看平台对应智能体集",
+          "url": "https://baijianai.com/agent-sets?type=UserCenter&set=land-investment"
+        },
+        {
+          "label": "查看专业智能体目录",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "relatedIds": [
+        "baijian"
+      ],
+      "keywords": "百鉴 智能体集 116 跨境土地投资智能体集",
+      "publicContribution": [
+        "负责百鉴智能体开发，累计开发 116 个智能体。"
+      ],
+      "agentExamples": [
+        {
+          "title": "马来西亚土地投资分析",
+          "description": "围绕当地土地法律环境、产权取得与工业用地要求，组织投资风险分析。",
+          "input": "企业投资意向、土地用途和项目条件",
+          "output": "土地投资风险评估及合规建议",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        },
+        {
+          "title": "美国房地产智能选址分析",
+          "description": "结合美国德州及联邦层面的土地、外资审查、环保许可与税收政策，按企业运营需求组织选址比较。",
+          "input": "企业行业、落地模式、投资规模与运营需求",
+          "output": "三套选址方案比较、许可时间线与行动建议",
+          "url": "https://baijianai.com/ai-agent?type=UserCenter"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/baijian-live-set-13-20261008.jpg",
+          "title": "境外土地投资智能体集页面"
+        }
+      ],
+      "mediaKind": "product-ui",
+      "accessNotes": [
+        "在百鉴平台登录后选择相应智能体。",
+        "AI 输出用于分析与准备，正式专业结论由相应专业人员审核。"
+      ]
+    },
+    {
+      "id": "baoqingtian",
+      "company": "qile",
+      "type": "app",
+      "title": "包晴天 App",
+      "summary": "面向个人与企业用户，将 AI 法律工具、律师咨询与线上委托连接成一站式法律服务入口。",
+      "statusLabel": "iOS / 安卓入口",
+      "statusTone": "",
+      "cardNote": "个人与企业用户端",
+      "audience": "个人、企业法律需求方",
+      "problem": "用户遇到法律问题时，需要理解风险、判断服务需求，并找到适合的专业律师。",
+      "solution": [
+        "提供 AI 法律咨询、合同审查和风险测评等工具。",
+        "连接律师咨询、直播与线上签约，支持用户进入专业服务流程。"
+      ],
+      "media": [
+        {
+          "file": "assets/official/baoqingtian-1.webp",
+          "title": "包晴天 App官方产品介绍图 1"
+        },
+        {
+          "file": "assets/official/baoqingtian-2.webp",
+          "title": "包晴天 App官方产品介绍图 2"
+        },
+        {
+          "file": "assets/official/baoqingtian-3.webp",
+          "title": "包晴天 App官方产品介绍图 3"
+        },
+        {
+          "file": "assets/official/baoqingtian-4.webp",
+          "title": "包晴天 App官方产品介绍图 4"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看 App Store 页面",
+          "url": "https://apps.apple.com/cn/app/包晴天/id6742443249"
+        }
+      ],
+      "relatedIds": [
+        "baoqingtian-lawyer",
+        "baoqingtian-wechat"
+      ],
+      "keywords": "包晴天 AI 法律 咨询 合同 风险 移动 律师 APP 双端",
+      "storeLinks": [
+        {
+          "name": "华为应用市场",
+          "url": "https://appgallery.huawei.com/app/C113322495",
+          "kind": "detail",
+          "note": "查看应用详情"
+        },
+        {
+          "name": "小米应用商店",
+          "url": "https://app.mi.com/details?id=bqt.com.user",
+          "kind": "detail",
+          "note": "查看应用详情"
+        },
+        {
+          "name": "荣耀应用市场",
+          "url": "https://www.honor.com/cn/tech/honor-app-market/",
+          "kind": "store",
+          "note": "在手机应用商店中搜索应用名称"
+        },
+        {
+          "name": "vivo 应用商店",
+          "url": "https://h5.appstore.vivo.com.cn/index.html#/details?search_word=%E5%8C%85%E6%99%B4%E5%A4%A9&search_action=0&origin_word&app_id=3968319&app_pos=1&source=5&appId=3968319&frompage=searchResultApp&listpos=1",
+          "kind": "detail",
+          "note": "查看应用详情"
+        },
+        {
+          "name": "OPPO 软件商店",
+          "url": "https://store.oppomobile.com/index.html",
+          "kind": "store",
+          "note": "在手机应用商店中搜索应用名称"
+        }
+      ],
+      "storeNote": "荣耀与 OPPO 可从官方商店入口进入，在手机应用商店中搜索应用名称。",
+      "publicContribution": [
+        "负责产品规划、设计、功能定义及需求分析，拆分产品架构与功能模块。",
+        "协调产品、研发、设计和测试推进两端交付，并与运营协作支持推广。",
+        "推动 AI 法律工具融入移动服务流程。"
+      ]
+    },
+    {
+      "id": "baoqingtian-lawyer",
+      "company": "qile",
+      "type": "app",
+      "title": "包晴天律师端 App",
+      "summary": "面向执业律师与律所，将内容展示、咨询服务、法律服务商品和办案辅助连接在同一移动平台。",
+      "statusLabel": "iOS / 安卓入口",
+      "statusTone": "",
+      "cardNote": "律师与律所端",
+      "audience": "执业律师、律所",
+      "problem": "律师需要持续展示专业能力、承接咨询并完成服务交易，业务工具和获客流程容易分散。",
+      "solution": [
+        "以图文与直播展示专业内容，并支持咨询、服务商城及办案辅助。",
+        "面向律师和律所构建服务展示与承接的移动入口。"
+      ],
+      "media": [
+        {
+          "file": "assets/official/lawyer-1.webp",
+          "title": "包晴天律师端 App官方产品介绍图 1"
+        },
+        {
+          "file": "assets/official/lawyer-2.webp",
+          "title": "包晴天律师端 App官方产品介绍图 2"
+        },
+        {
+          "file": "assets/official/lawyer-3.webp",
+          "title": "包晴天律师端 App官方产品介绍图 3"
+        },
+        {
+          "file": "assets/official/lawyer-4.webp",
+          "title": "包晴天律师端 App官方产品介绍图 4"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看 App Store 页面",
+          "url": "https://apps.apple.com/cn/app/包晴天律师端/id6742393716"
+        }
+      ],
+      "relatedIds": [
+        "baoqingtian",
+        "baoqingtian-wechat"
+      ],
+      "keywords": "包晴天 AI 法律 咨询 合同 风险 移动 律师 APP 双端",
+      "storeLinks": [
+        {
+          "name": "华为应用市场",
+          "url": "https://appgallery.huawei.com/app/C113329465",
+          "kind": "detail",
+          "note": "查看应用详情"
+        },
+        {
+          "name": "小米应用商店",
+          "url": "https://app.mi.com/details?id=bqt.com.lawyer",
+          "kind": "detail",
+          "note": "查看应用详情"
+        },
+        {
+          "name": "荣耀应用市场",
+          "url": "https://www.honor.com/cn/tech/honor-app-market/",
+          "kind": "store",
+          "note": "在手机应用商店中搜索应用名称"
+        },
+        {
+          "name": "vivo 应用商店",
+          "url": "https://h5.appstore.vivo.com.cn/index.html#/details?search_word=%E5%8C%85%E6%99%B4%E5%A4%A9&search_action=0&origin_word&app_id=3988196&app_pos=3&source=5&appId=3988196&frompage=searchResultApp&listpos=3",
+          "kind": "detail",
+          "note": "查看应用详情"
+        },
+        {
+          "name": "OPPO 软件商店",
+          "url": "https://store.oppomobile.com/index.html",
+          "kind": "store",
+          "note": "在手机应用商店中搜索应用名称"
+        }
+      ],
+      "storeNote": "荣耀与 OPPO 可从官方商店入口进入，在手机应用商店中搜索应用名称。",
+      "publicContribution": [
+        "负责产品规划、设计、功能定义及需求分析，拆分产品架构与功能模块。",
+        "协调产品、研发、设计和测试推进两端交付，并与运营协作支持推广。",
+        "推动 AI 法律工具融入移动服务流程。"
+      ]
+    },
+    {
+      "id": "baoqingtian-wechat",
+      "company": "qile",
+      "type": "miniprogram",
+      "title": "包晴天微信小程序",
+      "summary": "承接微信场景的法律服务入口，与包晴天用户端 App、律师端 App 形成多端产品矩阵。",
+      "statusLabel": "微信小程序",
+      "statusTone": "",
+      "cardNote": "微信端 / 与 App 协同",
+      "visualLabel": "BAOQINGTIAN / WEIXIN",
+      "visualTitle": "微信小程序\n法律服务入口",
+      "audience": "微信场景中的法律服务需求方",
+      "problem": "用户在微信中发现与接触法律服务，需要轻便的入口，并与独立 App 的后续服务流程衔接。",
+      "solution": [
+        "在微信中提供包晴天法律服务入口。",
+        "与用户端及律师端 App 共同承接多端服务场景。"
+      ],
+      "wechatName": "包晴天",
+      "relatedIds": [
+        "baoqingtian",
+        "baoqingtian-lawyer"
+      ],
+      "keywords": "包晴天 微信 小程序 多端 导流 法律",
+      "wechatShareCode": "#小程序://包晴天/BnPqzk8jufxcj8u",
+      "publicContribution": [
+        "负责包晴天小程序的产品规划，并与用户端、律师端的产品架构协同。",
+        "与研发、设计、测试和运营协作推进小程序与 App 的衔接。"
+      ]
+    },
+    {
+      "id": "fujie-website-1",
+      "company": "fujie",
+      "type": "website",
+      "title": "赋界科技官网",
+      "summary": "赋界科技面向企业 AI 智能体方案与交付服务的公开官网，展示产品、解决方案、行业案例与技术能力。",
+      "statusLabel": "官网可访问",
+      "statusTone": "",
+      "cardNote": "企业 AI 产品与交付",
+      "visualLabel": "FUJIE / WEBSITE",
+      "visualTitle": "赋界科技官网",
+      "problem": "面向需要了解 AI 智能体能力、应用场景及交付方式的企业客户，提供统一的产品与服务信息入口。",
+      "solution": [
+        "组织首页、解决方案、产品介绍、行业案例、技术能力、关于赋界及联系入口。",
+        "展示法律与企业业务场景中的 AI 产品，以及从需求梳理到开发部署、培训和试运行的交付方式。"
+      ],
+      "keywords": "赋界 法律智能化应用 风险评估2.0 官网 方案 AI",
+      "links": [
+        {
+          "label": "访问赋界科技官网",
+          "url": "https://civright.com/"
+        },
+        {
+          "label": "查看赋界解决方案",
+          "url": "https://civright.com/solutions"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-official-20261008.jpg",
+          "title": "赋界科技官网首页实际截图"
+        }
+      ],
+      "relatedIds": [
+        "fujie-solution-1",
+        "fujie-solution-2",
+        "fujie-solution-3",
+        "fujie-solution-4",
+        "fujie-solution-5"
+      ]
+    },
+    {
+      "id": "fujie-solution-1",
+      "company": "fujie",
+      "type": "solution",
+      "title": "律所 AI Native",
+      "summary": "以案件管理和律所运营为主线，连接材料处理、AI 辅助分析、文书草稿、律师审核与团队协作。",
+      "statusLabel": "本地合成演示",
+      "statusTone": "partial",
+      "cardNote": "企业业务场景方案",
+      "audience": "律师事务所与专业团队",
+      "problem": "案件材料、进度与协作分散，律师需要把 AI 辅助作业接入保留来源、版本和审核责任的工作流程。",
+      "solution": [
+        "围绕案件与客户管理、案件材料处理、AI 辅助分析及文书草稿组织作业。",
+        "连接律师审核、团队协作与内部运营；正式输出需律师确认。",
+        "先确定律所流程、用户与数据边界，再配置、部署、培训和试运行。"
+      ],
+      "links": [
+        {
+          "label": "查看官方方案介绍",
+          "url": "https://civright.com/products/law-firm-ai-native"
+        },
+        {
+          "label": "查看赋界方案目录",
+          "url": "https://civright.com/solutions"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-law-firm-ai-native-20261008.jpg",
+          "title": "律所 AI Native官方介绍页实际截图"
+        }
+      ],
+      "keywords": "赋界 解决方案 律所 AI Native 律师事务所与专业团队"
+    },
+    {
+      "id": "fujie-solution-2",
+      "company": "fujie",
+      "type": "solution",
+      "title": "企业 AI Native",
+      "summary": "围绕基础经营、业务营销与品牌内容，以可组合的通用模块构建企业 AI 工作体系。",
+      "statusLabel": "已上线 · 受控内测",
+      "statusTone": "",
+      "cardNote": "企业业务场景方案",
+      "audience": "从部门任务逐步建设 AI 工作体系的企业",
+      "problem": "企业不同部门的经营、营销与内容任务需要统一组织，同时明确数据权限、系统接入和人工审核责任。",
+      "solution": [
+        "基础经营涵盖财税、法务合规、人力招聘、行政与 IT 运维。",
+        "业务营销连接商机雷达与营销触达，品牌内容由品牌创作模块承载。",
+        "从需求梳理和模块选择起步，按数据、权限、系统及验收范围制定实施方案。"
+      ],
+      "links": [
+        {
+          "label": "查看官方方案介绍",
+          "url": "https://civright.com/products/enterprise-ai-native"
+        },
+        {
+          "label": "查看赋界方案目录",
+          "url": "https://civright.com/solutions"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-enterprise-ai-native-20261008.jpg",
+          "title": "企业 AI Native官方介绍页实际截图"
+        }
+      ],
+      "keywords": "赋界 解决方案 企业 AI Native 从部门任务逐步建设 AI 工作体系的企业"
+    },
+    {
+      "id": "fujie-solution-3",
+      "company": "fujie",
+      "type": "solution",
+      "title": "消费品企业出海服务",
+      "summary": "围绕消费品海外市场拓展，把资料检索、出海任务、数据治理与专家审核连成协作流程。",
+      "statusLabel": "已上线 · 合成示例",
+      "statusTone": "",
+      "cardNote": "企业业务场景方案",
+      "audience": "拓展海外市场的消费品企业",
+      "problem": "产品进入新市场需要汇总配方、产地、标签与销售方式等资料，并把研究来源、待办和专业审核集中管理。",
+      "solution": [
+        "通过出海任务工作台整理市场、产品与渠道资料，保留来源、待办和报告版本。",
+        "数据中心支持资料检索和原文查看，数据治理记录解析、标注与质量状态。",
+        "专家试审按清单记录意见；访客试审不代表正式专家签署，专业结论仍须专业人员确认。"
+      ],
+      "links": [
+        {
+          "label": "查看官方方案介绍",
+          "url": "https://civright.com/products/consumer-goods-overseas"
+        },
+        {
+          "label": "查看赋界方案目录",
+          "url": "https://civright.com/solutions"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-consumer-goods-overseas-20261008.jpg",
+          "title": "消费品企业出海服务官方介绍页实际截图"
+        }
+      ],
+      "keywords": "赋界 解决方案 消费品企业出海服务 拓展海外市场的消费品企业"
+    },
+    {
+      "id": "fujie-solution-4",
+      "company": "fujie",
+      "type": "solution",
+      "title": "企业营销解决方案",
+      "summary": "组合 AI 商机雷达与营销触达，组织潜客发现、公开研究、线索验证、去重、触达准备和销售交接。",
+      "statusLabel": "内部流程已有实践",
+      "statusTone": "partial",
+      "cardNote": "企业业务场景方案",
+      "audience": "需要持续发现、验证潜客并规范销售交接的企业团队",
+      "problem": "线索研究容易重复，来源、验证依据与触达状态需要可追踪，才能形成清晰的销售交接。",
+      "solution": [
+        "覆盖潜客发现、公开信息研究、线索验证、去重与初次触达准备。",
+        "整理回复并交接销售，按目标客户、公开来源、去重规则和触达边界配置。",
+        "对应 AI 营销智能体，包含在企业 AI Native 中，采用私有化部署；交接后的 CRM 销售管理不在标准范围内。"
+      ],
+      "links": [
+        {
+          "label": "查看官方方案介绍",
+          "url": "https://civright.com/products/ai-marketing-engine"
+        },
+        {
+          "label": "查看赋界方案目录",
+          "url": "https://civright.com/solutions"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-ai-marketing-engine-20261008.jpg",
+          "title": "企业营销解决方案官方介绍页实际截图"
+        }
+      ],
+      "keywords": "赋界 解决方案 企业营销解决方案 需要持续发现、验证潜客并规范销售交接的企业团队"
+    },
+    {
+      "id": "fujie-solution-5",
+      "company": "fujie",
+      "type": "solution",
+      "title": "企业品牌宣传解决方案",
+      "summary": "围绕品牌标准，组织内容策划、文案、图片与视频生成，以及人工审核、修改和定稿。",
+      "statusLabel": "方案规划中",
+      "statusTone": "partial",
+      "cardNote": "企业业务场景方案",
+      "audience": "需要组织品牌内容生产并保留标准与审核的企业团队",
+      "problem": "品牌内容任务零散、沟通重复，需要把策划与生成结果组织为可复核的制作流程，并保持人工审核。",
+      "solution": [
+        "覆盖内容策划、品牌文案、图片及视频生成、人工审核与修改定稿。",
+        "对应 AI 品牌内容智能体，包含在企业 AI Native 中，采用私有化部署。",
+        "先确定品牌规范、内容类型、生成工具和审核责任，再配置流程；标准方案不默认包含自动发布。"
+      ],
+      "links": [
+        {
+          "label": "查看官方方案介绍",
+          "url": "https://civright.com/products/ai-brand-content-engine"
+        },
+        {
+          "label": "查看赋界方案目录",
+          "url": "https://civright.com/solutions"
+        }
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-ai-brand-content-engine-20261008.jpg",
+          "title": "企业品牌宣传解决方案官方介绍页实际截图"
+        }
+      ],
+      "keywords": "赋界 解决方案 企业品牌宣传解决方案 需要组织品牌内容生产并保留标准与审核的企业团队"
+    },
+    {
+      "id": "fujie-product-1",
+      "company": "fujie",
+      "type": "product",
+      "title": "律所 AI Native",
+      "summary": "以案件管理和律所运营为主线，连接材料处理、AI 辅助分析、文书草稿、律师审核与团队协作。",
+      "statusLabel": "本地合成演示",
+      "statusTone": "live",
+      "cardNote": "案件与律师协作",
+      "visualLabel": "FUJIE / AI PRODUCT 01",
+      "problem": "案件材料、进度与协作分散，律师需要把 AI 辅助作业接入保留来源、版本和审核责任的工作流程。",
+      "solution": [
+        "围绕案件与客户管理、案件材料处理、AI 辅助分析及文书草稿组织作业。",
+        "连接律师审核、团队协作与内部运营；正式输出需律师确认。",
+        "先确定律所流程、用户与数据边界，再配置、部署、培训和试运行。"
+      ],
+      "keywords": "赋界 解决方案 律所 AI Native 律师事务所与专业团队",
+      "media": [
+        {
+          "file": "assets/official/fujie-law-firm-ai-native-20261008.jpg",
+          "title": "律所 AI Native官方介绍页实际截图"
+        }
+      ],
+      "audience": "律师事务所与专业团队",
+      "relatedIds": [
+        "fujie-solution-1"
+      ],
+      "links": [
+        {
+          "label": "查看产品介绍",
+          "url": "https://civright.com/products/law-firm-ai-native"
+        },
+        {
+          "label": "打开演示入口",
+          "url": "https://agent.civright.com/"
+        }
+      ],
+      "accessNotes": [
+        "提供本地合成演示，可预约演示与正式试用。演示入口可能需要登录。",
+        "AI 辅助分析和文书草稿由律师审核后正式输出。"
+      ]
+    },
+    {
+      "id": "fujie-product-2",
+      "company": "fujie",
+      "type": "product",
+      "title": "企业 AI Native",
+      "summary": "围绕基础经营、业务营销与品牌内容，以可组合的通用模块构建企业 AI 工作体系。",
+      "statusLabel": "已上线 受控内测",
+      "statusTone": "live",
+      "cardNote": "8 个通用模块",
+      "visualLabel": "FUJIE / AI PRODUCT 02",
+      "problem": "企业不同部门的经营、营销与内容任务需要统一组织，同时明确数据权限、系统接入和人工审核责任。",
+      "solution": [
+        "基础经营涵盖 AI 财税、法务合规、人力招聘、行政和 IT 运维五类智能体。",
+        "业务营销包含 AI 商机雷达与 AI 营销触达，品牌内容由 AI 品牌创作智能体承载。",
+        "将 8 个通用模块按需求组合到统一企业工作台，连接部门任务、资料、权限与人工审核。"
+      ],
+      "keywords": "赋界 解决方案 企业 AI Native 从部门任务逐步建设 AI 工作体系的企业",
+      "media": [
+        {
+          "file": "assets/official/fujie-enterprise-ai-native-20261008.jpg",
+          "title": "企业 AI Native官方介绍页实际截图"
+        }
+      ],
+      "audience": "从部门任务逐步建设 AI 工作体系的企业",
+      "relatedIds": [
+        "fujie-solution-2"
+      ],
+      "links": [
+        {
+          "label": "查看产品介绍",
+          "url": "https://civright.com/products/enterprise-ai-native"
+        },
+        {
+          "label": "进入企业工作台",
+          "url": "https://native.civright.com/"
+        }
+      ],
+      "accessNotes": [
+        "通过企业身份登录工作台，内测账号由赋界开通。",
+        "按企业需求组合模块，AI 输出经人工复核后使用。"
+      ]
+    },
+    {
+      "id": "fujie-product-3",
+      "company": "fujie",
+      "type": "product",
+      "title": "消费品企业出海服务",
+      "summary": "围绕消费品海外市场拓展，把资料检索、出海任务、数据治理与专家审核连成协作流程。",
+      "statusLabel": "合成示例体验",
+      "statusTone": "live",
+      "cardNote": "出海任务与数据协作",
+      "visualLabel": "FUJIE / AI PRODUCT 03",
+      "problem": "产品进入新市场需要汇总配方、产地、标签与销售方式等资料，并把研究来源、待办和专业审核集中管理。",
+      "solution": [
+        "通过出海任务工作台整理市场、产品与渠道资料，保留来源、待办和报告版本。",
+        "数据中心支持资料检索和原文查看，数据治理记录解析、标注与质量状态。",
+        "专家试审按清单记录意见；访客试审不代表正式专家签署，专业结论仍须专业人员确认。"
+      ],
+      "keywords": "赋界 解决方案 消费品企业出海服务 拓展海外市场的消费品企业",
+      "media": [
+        {
+          "file": "assets/official/fujie-consumer-goods-overseas-20261008.jpg",
+          "title": "消费品企业出海服务官方介绍页实际截图"
+        }
+      ],
+      "audience": "拓展海外市场的消费品企业",
+      "relatedIds": [
+        "fujie-solution-3"
+      ],
+      "links": [
+        {
+          "label": "查看产品介绍",
+          "url": "https://civright.com/products/consumer-goods-overseas"
+        },
+        {
+          "label": "查看方案与体验",
+          "url": "https://huanlejia.civright.com/solution"
+        }
+      ],
+      "accessNotes": [
+        "五个模块提供免登录合成示例体验，访客任务与试审记录独立保存。",
+        "正式专业结论由专业人员结合具体项目资料确认。"
+      ]
+    },
+    {
+      "id": "fujie-product-4",
+      "company": "fujie",
+      "type": "product",
+      "title": "离婚财产协议智能体",
+      "summary": "通过对话整理婚姻、财产、出资与争议，追问缺失信息并形成初步分析，为协议准备和律师咨询整理事实底稿。",
+      "statusLabel": "已上线 试运行",
+      "statusTone": "live",
+      "cardNote": "对话访谈与事实底稿",
+      "visualLabel": "FUJIE / AI PRODUCT 04",
+      "problem": "准备离婚财产协商的用户及接待咨询的律师，需要把人物、时间、财产、出资与争议整理为清楚的事实材料。",
+      "solution": [
+        "按常规离婚财产分割、离婚后复婚、同居析产和彩礼返还四类事项分流。",
+        "通过自然语言访谈抽取事实，补充关键缺失项，展示任务过程和报告修订。",
+        "形成初步分析并支持文本导出，便于后续沟通和律师复核。"
+      ],
+      "keywords": "离婚 财产 协议 同居 彩礼",
+      "accessNotes": [
+        "已上线试运行，可直接进入智能体。",
+        "初步分析供律师复核，正式协议条款和法律判断由律师结合材料确认。"
+      ],
+      "audience": "用户 律师",
+      "links": [
+        {
+          "label": "查看产品介绍",
+          "url": "https://civright.com/products/divorce-property-agreement"
+        },
+        {
+          "label": "进入智能体",
+          "url": "https://civright.com/hengxi/"
+        }
+      ],
+      "relatedIds": [
+        "fujie-website-1"
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-divorce-property-agreement-20261008.jpg",
+          "title": "离婚财产协议智能体产品介绍"
+        }
+      ]
+    },
+    {
+      "id": "fujie-product-5",
+      "company": "fujie",
+      "type": "product",
+      "title": "法律案源线索",
+      "summary": "汇集公开法律动态与事件，通过精选、热点、日报、主题和案源线索入口，支持法律信息阅读与潜在服务机会研究。",
+      "statusLabel": "公开访问",
+      "statusTone": "live",
+      "cardNote": "法律动态与线索检索",
+      "visualLabel": "FUJIE / AI PRODUCT 05",
+      "problem": "律师及法律服务团队需要从分散的公开信息中发现相关事件、持续跟踪主题并整理潜在服务机会。",
+      "solution": [
+        "提供精选、全部、热点、日报、主题及案源线索等阅读与检索入口。",
+        "保留公开信息原始链接、发布时间及本站发现时间，支持回到原文查看。",
+        "按主题组织法律动态和事件，帮助律师开展后续研究与服务需求判断。"
+      ],
+      "keywords": "法律 动态 热点 日报 主题 案源 线索",
+      "accessNotes": [
+        "公开网页可直接访问。",
+        "公开事件线索需进一步研究，不代表已经形成案件或客户。"
+      ],
+      "audience": "律师 法律服务团队",
+      "links": [
+        {
+          "label": "打开法律案源线索",
+          "url": "https://zhanghongqian2025.github.io/AI-HOT-ON-LAW/"
+        },
+        {
+          "label": "查看赋界产品目录",
+          "url": "https://civright.com/products"
+        }
+      ],
+      "relatedIds": [
+        "fujie-solution-4"
+      ],
+      "media": [
+        {
+          "file": "assets/official/fujie-legal-leads-20261008.jpg",
+          "title": "法律案源线索产品介绍"
+        }
+      ]
+    }
+  ]
+}
