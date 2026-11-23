@@ -5,6 +5,7 @@ const external = (url) => { try { const u = new URL(url); return u.protocol === 
 const localAsset = (path) => typeof path === 'string' && /^assets\/[a-zA-Z0-9/_\.\-]+$/.test(path) && !path.includes('..') ? path : '';
 const typeNames = {platform:'平台',agent:'智能体集',app:'移动应用',miniprogram:'微信小程序',website:'官网',solution:'解决方案',product:'AI 产品',software:'专业软件',terminal:'自助终端'};
 let data, companyFilter = 'all', typeFilter = 'all', search = '', gallery = [], imageIndex = 0, lastImageTrigger;
+let collectionLink, returnToCollection = false;
 const lightbox = $('#lightbox');
 function status(item) { return `<span class="status ${esc(item.statusTone || '')}">${esc(item.statusLabel)}</span>`; }
 function asset(item) { return item.media?.filter(m => localAsset(m.file)) || []; }
@@ -77,8 +78,30 @@ function route() {
   if (match && !item) { $('#home-view').hidden = true; $('#detail-view').hidden = false; $('#detail-view').innerHTML = '<a href="#works" class="detail-back">← 返回成果作品</a><h1>这项成果尚未收录</h1><p class="detail-lead">请返回清单查看已收录的作品。</p>'; document.title='成果未收录 张洪千作品集'; window.scrollTo(0,0); return; }
   $('#home-view').hidden = Boolean(item); $('#detail-view').hidden = !item;
   if (item) { renderDetail(item); window.scrollTo({top:0,behavior:'instant'}); $('#detail-title').focus({preventScroll:true}); }
-  else { document.title='张洪千 AI 产品与交付作品集'; const target = document.getElementById(location.hash.slice(1)); if (target) requestAnimationFrame(()=>target.scrollIntoView()); }
+  else {
+    document.title = '张洪千 AI 产品与交付作品集';
+    const hash = location.hash;
+    const link = hash === '#works' && returnToCollection ? collectionLink : null;
+    collectionLink = null;
+    returnToCollection = false;
+    const target = document.getElementById(hash.slice(1));
+    if (target) requestAnimationFrame(() => {
+      if (location.hash !== hash) return;
+      if (link?.isConnected) {
+        link.focus({preventScroll: true});
+        link.scrollIntoView({block: 'center', behavior: 'instant'});
+      } else {
+        target.scrollIntoView();
+      }
+    });
+  }
 }
+$('#main').addEventListener('click', event => {
+  if (event.defaultPrevented || event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  const link = event.target.closest('a');
+  if (link?.matches('#collection .project-card a[href^="#work/"]')) collectionLink = link;
+  if (link?.matches('#detail-view .detail-back')) returnToCollection = true;
+});
 function updateLightbox() {
   const m = gallery[imageIndex]; $('#lightbox-img').src = localAsset(m.file); $('#lightbox-img').alt = m.title; $('#lightbox-title').textContent = m.title;
   $('#lightbox-caption').textContent = `${imageIndex+1} / ${gallery.length}`;
