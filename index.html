@@ -5,13 +5,13 @@
   <meta name="description" content="张洪千的个人 AI 产品作品集：百鉴平台、包晴天双端、赋界科技与华宇信息产品及解决方案。">
   <title>张洪千 AI 产品与交付作品集</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
-  <script src="app-7e71bab6e05c.js" defer></script>
+  <script src="app-394558fba791.js" defer></script>
 </head>
 <body>
 <a href="#main" class="skip-link">跳到主要内容</a>
 <header class="site-header">
   <div class="header-inner"><a href="#top" class="brand" aria-label="张洪千作品集首页"><span class="brand-mark">Z<span>H</span></span><span>张洪千<small>AI 产品与交付</small></span></a>
-  <nav aria-label="主要导航"><a href="#works">成果作品</a></nav></div>
+  <nav aria-label="主要导航"><a href="#works">成果作品</a><button id="open-display-settings" type="button" aria-haspopup="dialog" aria-controls="display-settings">显示设置</button></nav></div>
 </header>
 <main id="main">
 <div id="home-view">
@@ -44,6 +44,54 @@
 <section id="load-error" class="wrap error-message" hidden><h2>内容未能加载</h2><p>请通过项目说明中的本地预览地址打开，并确认 data/portfolio.json 可访问。</p><button class="button primary" id="reload">重新加载</button></section>
 </main>
 <footer class="site-footer"><div class="wrap"><a class="footer-name" href="#top">张洪千 <span>产品与交付作品集</span></a><p>素材版权归各权利人</p><a href="#top">回到首页 ↑</a></div></footer>
-<dialog id="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><h2 id="lightbox-title">素材预览</h2><button class="close-button" id="lightbox-close" aria-label="关闭素材预览">✕</button></div><div class="lightbox-image"><img id="lightbox-img" alt=""></div><div class="lightbox-footer"><button id="prev-image" aria-label="上一张素材">←</button><p id="lightbox-caption"></p><button id="next-image" aria-label="下一张素材">→</button></div></dialog>
+<dialog id="lightbox" aria-labelledby="lightbox-title">
+  <div class="lightbox-toolbar">
+    <h2 id="lightbox-title">素材预览</h2>
+    <button class="close-button" id="lightbox-close" type="button" aria-label="关闭素材预览" autofocus>✕</button>
+  </div>
+  <div class="lightbox-image" id="lightbox-viewport" role="region" aria-label="图片预览区域" tabindex="-1">
+    <img id="lightbox-img" alt="">
+  </div>
+  <div class="lightbox-footer">
+    <div class="lightbox-pagination">
+      <button id="prev-image" type="button" aria-label="上一张素材">←</button>
+      <p id="lightbox-caption" aria-live="polite"></p>
+      <button id="next-image" type="button" aria-label="下一张素材">→</button>
+    </div>
+    <button id="lightbox-zoom" type="button" aria-controls="lightbox-viewport">查看原尺寸</button>
+    <p id="lightbox-pan-help" hidden>滑动图片，或用方向键查看细节。</p>
+  </div>
+</dialog>
+<dialog id="display-settings" aria-labelledby="display-settings-title">
+  <div class="display-settings-header">
+    <h2 id="display-settings-title">显示设置</h2>
+    <button id="close-display-settings" type="button" aria-label="关闭显示设置" autofocus>✕</button>
+  </div>
+  <form id="display-preferences" autocomplete="off">
+    <fieldset>
+      <legend>字号</legend>
+      <div class="display-options">
+        <label><input type="radio" name="size" value="compact"><span>较小</span></label>
+        <label><input type="radio" name="size" value="standard" checked><span>标准</span></label>
+        <label><input type="radio" name="size" value="large"><span>较大</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>中文字体</legend>
+      <div class="display-options">
+        <label><input type="radio" name="font" value="sans" checked><span>黑体</span></label>
+        <label><input type="radio" name="font" value="serif"><span>宋体</span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>页面风格</legend>
+      <div class="display-options">
+        <label><input type="radio" name="theme" value="portfolio" checked><span>作品集</span></label>
+        <label><input type="radio" name="theme" value="reading"><span>简洁阅读</span></label>
+      </div>
+    </fieldset>
+    <button id="reset-display-settings" type="button">恢复默认</button>
+  </form>
+</dialog>
 <noscript><p class="wrap">本页面需要启用 JavaScript 来加载成果清单与详情。源文件与完整内容见项目 data 文件。</p></noscript>
 </body></html>

@@ -7,13 +7,20 @@ const typeNames = {platform:'平台',agent:'智能体集',app:'移动应用',min
 let data, companyFilter = 'all', typeFilter = 'all', search = '', gallery = [], imageIndex = 0, lastImageTrigger;
 let collectionLink, returnToCollection = false;
 const lightbox = $('#lightbox');
+let lightboxViewport = $('#lightbox-viewport');
+const lightboxZoom = $('#lightbox-zoom');
 function status(item) { return `<span class="status ${esc(item.statusTone || '')}">${esc(item.statusLabel)}</span>`; }
 function asset(item) { return item.media?.filter(m => localAsset(m.file)) || []; }
 function mediaMarkup(item) {
   const images = asset(item);
   if (item.type === 'miniprogram') return `<div class="mini-visual"><span>WEIXIN MINI PROGRAM</span><strong>包晴天<br>微信小程序</strong><small>微信法律服务入口 · 此处为文字展示，非界面截图</small></div>`;
-  if (images.length && item.type === 'app') return `<div class="card-media apps ${item.id.includes('lawyer') ? 'lawyer' : ''}">${images.slice(0,2).map(m => `<img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy" width="600" height="1300">`).join('')}<span class="media-label">官方 App Store 产品图</span></div>`;
-  if (images.length) return `<div class="card-media website ${item.mediaKind === 'product-photo' ? 'product-photo' : ''}"><img src="${esc(images[0].file)}" alt="${esc(images[0].title)}" loading="lazy" width="1280" height="720"><span class="media-label">${item.mediaKind === 'product-photo' ? '产品现场照片' : item.mediaKind === 'product-ui' ? '产品页面 · 实际截图' : '官方介绍页 · 实际截图'}</span></div>`;
+  if (images.length) {
+    const isApp = item.type === 'app';
+    const variant = isApp ? (item.id.includes('lawyer') ? 'apps lawyer' : 'apps') : item.mediaKind === 'product-photo' ? 'product-photo' : 'website';
+    const label = isApp ? '官方 App Store 产品图' : item.mediaKind === 'product-photo' ? '产品现场照片' : item.mediaKind === 'product-ui' ? '产品页面 · 实际截图' : '官方介绍页 · 实际截图';
+    const thumbnails = images.slice(0, isApp ? 2 : 1).map(m => `<img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy">`).join('');
+    return `<div class="card-media ${variant}"><div class="card-image-stage">${thumbnails}</div><span class="media-label">${label}</span></div>`;
+  }
   return `<div class="agent-visual"><span class="visual-index">${esc(item.visualLabel || typeNames[item.type])}</span><strong>${esc(item.visualTitle || item.title)}</strong><small>${item.pending ? '素材待补 · 此处为视觉占位' : '场景索引 · 此处为文字示意，非产品界面'}</small></div>`;
 }
 function wechatMarkup(item) {
@@ -58,9 +65,14 @@ function renderDetail(item) {
   if (contribution.length) blocks.push(['我的负责范围',contribution]);
   if (item.accessNotes) blocks.push(['使用方式',item.accessNotes]);
   const related = (item.relatedIds || []).map(id => data.projects.find(p => p.id === id)).filter(Boolean);
-  $('#detail-view').innerHTML = `<a href="#works" class="detail-back">← 返回成果作品</a><div class="detail-top ${!links.length ? 'without-entry' : ''}"><div><p class="detail-kicker">${esc(company.name)} / ${esc(typeNames[item.type])}${item.parent ? ' / 百鉴平台下的智能体集' : ''}</p><h1 id="detail-title" tabindex="-1">${esc(item.title)}</h1><p class="detail-lead">${esc(item.summary)}</p>${storeMarkup(item)}${wechatMarkup(item)}</div>${links.length ? `<aside class="detail-state" aria-label="产品入口"><p class="state-name">产品入口</p>${status(item)}<div class="detail-actions">${links.map(l => `<a class="button primary" href="${esc(external(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label)} <span>↗</span></a>`).join('')}</div></aside>` : ''}</div><div class="detail-grid public-detail-grid"><div class="detail-content">${blocks.map(([title,body]) => `<section><h2>${title}</h2>${Array.isArray(body) ? `<ul>${body.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : `<p>${esc(body)}</p>`}</section>`).join('')}${agentExamplesMarkup(item)}${platformCollectionsMarkup(item)}${images.length ? `<section><h2>产品展示</h2><p>点击图片查看大图</p><div class="detail-gallery">${images.map((m,i) => `<figure class="media-item ${item.type !== 'app' ? 'wide' : ''}"><button data-image-index="${i}" aria-label="放大${esc(m.title)}"><img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy"></button><figcaption>${esc(m.title)}</figcaption></figure>`).join('')}</div></section>` : ''}${children.length ? `<section><h2>平台下的智能体集</h2><div class="related-links">${children.map(c => `<a href="#work/${esc(c.id)}">${esc(c.title)} ↗</a>`).join('')}</div></section>` : ''}${related.length ? `<section><h2>相关成果</h2><div class="related-links">${related.map(p => `<a href="#work/${esc(p.id)}">${esc(p.title)} ↗</a>`).join('')}</div></section>` : ''}</div></div>`;
+  $('#detail-view').innerHTML = `<a href="#works" class="detail-back">← 返回成果作品</a><div class="detail-top ${!links.length ? 'without-entry' : ''}"><div><p class="detail-kicker">${esc(company.name)} / ${esc(typeNames[item.type])}${item.parent ? ' / 百鉴平台下的智能体集' : ''}</p><h1 id="detail-title" tabindex="-1">${esc(item.title)}</h1><p class="detail-lead">${esc(item.summary)}</p>${storeMarkup(item)}${wechatMarkup(item)}</div>${links.length ? `<aside class="detail-state" aria-label="产品入口"><p class="state-name">产品入口</p>${status(item)}<div class="detail-actions">${links.map(l => `<a class="button primary" href="${esc(external(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label)} <span>↗</span></a>`).join('')}</div></aside>` : ''}</div><div class="detail-grid public-detail-grid"><div class="detail-content">${blocks.map(([title,body]) => `<section><h2>${title}</h2>${Array.isArray(body) ? `<ul>${body.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : `<p>${esc(body)}</p>`}</section>`).join('')}${agentExamplesMarkup(item)}${platformCollectionsMarkup(item)}${images.length ? `<section><h2>产品展示</h2><p class="gallery-help">打开图片预览，可切换原尺寸查看细节。</p><div class="detail-gallery">${images.map((m,i) => `<figure class="media-item ${item.type !== 'app' ? 'wide' : ''}"><button data-image-index="${i}" aria-label="放大${esc(m.title)}"><img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy"></button><figcaption>${esc(m.title)}</figcaption></figure>`).join('')}</div></section>` : ''}${children.length ? `<section><h2>平台下的智能体集</h2><div class="related-links">${children.map(c => `<a href="#work/${esc(c.id)}">${esc(c.title)} ↗</a>`).join('')}</div></section>` : ''}${related.length ? `<section><h2>相关成果</h2><div class="related-links">${related.map(p => `<a href="#work/${esc(p.id)}">${esc(p.title)} ↗</a>`).join('')}</div></section>` : ''}</div></div>`;
   $('#detail-view').querySelectorAll('[data-image-index]').forEach(b => b.addEventListener('click', () => {
-    gallery = images; imageIndex = Number(b.dataset.imageIndex); lastImageTrigger = b; updateLightbox(); lightbox.showModal();
+    gallery = images;
+    imageIndex = Number(b.dataset.imageIndex);
+    lastImageTrigger = b;
+    setOriginalSize(false);
+    updateLightbox();
+    lightbox.showModal();
   }));
   const copyButton = $('#detail-view').querySelector('.wechat-copy');
   if (copyButton) copyButton.addEventListener('click', async () => {
@@ -106,14 +118,100 @@ function updateLightbox() {
   const m = gallery[imageIndex]; $('#lightbox-img').src = localAsset(m.file); $('#lightbox-img').alt = m.title; $('#lightbox-title').textContent = m.title;
   $('#lightbox-caption').textContent = `${imageIndex+1} / ${gallery.length}`;
   $('#prev-image').disabled = imageIndex===0; $('#next-image').disabled = imageIndex===gallery.length-1;
+  lightboxViewport.scrollTo({left:0, top:0, behavior:'instant'});
 }
+function setOriginalSize(original) {
+  lightboxViewport.classList.toggle('original-size', original);
+  lightboxViewport.tabIndex = original ? 0 : -1;
+  lightboxZoom.textContent = original ? '适应窗口' : '查看原尺寸';
+  $('#lightbox-pan-help').hidden = !original;
+  if (original) lightboxViewport.setAttribute('aria-describedby', 'lightbox-pan-help');
+  else lightboxViewport.removeAttribute('aria-describedby');
+  lightboxViewport.scrollTo({left:0, top:0, behavior:'instant'});
+}
+function moveLightbox(offset) {
+  const nextIndex = imageIndex + offset;
+  if (nextIndex < 0 || nextIndex >= gallery.length) return;
+  if (lightboxViewport.classList.contains('original-size')) {
+    const keepFocus = document.activeElement === lightboxViewport;
+    // A new scroll area keeps touch momentum from carrying over to the next image.
+    const viewport = lightboxViewport.cloneNode(false);
+    viewport.append(...lightboxViewport.childNodes);
+    lightboxViewport.replaceWith(viewport);
+    lightboxViewport = viewport;
+    if (keepFocus) viewport.focus({preventScroll:true});
+  }
+  imageIndex = nextIndex;
+  updateLightbox();
+}
+lightboxZoom.addEventListener('click', () => {
+  const original = !lightboxViewport.classList.contains('original-size');
+  setOriginalSize(original);
+  if (original) lightboxViewport.focus({preventScroll:true});
+});
 $('#lightbox-close').addEventListener('click',()=>lightbox.close());
-lightbox.addEventListener('close',()=>{lastImageTrigger?.focus({preventScroll:true});});
+lightbox.addEventListener('close', () => {
+  lastImageTrigger?.focus({preventScroll:true});
+  lastImageTrigger = null;
+});
 lightbox.addEventListener('click',e=>{if(e.target===lightbox){const r=lightbox.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)lightbox.close();}});
-$('#prev-image').addEventListener('click',()=>{if(imageIndex>0){imageIndex--;updateLightbox();}});
-$('#next-image').addEventListener('click',()=>{if(imageIndex<gallery.length-1){imageIndex++;updateLightbox();}});
-lightbox.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'&&imageIndex>0){imageIndex--;updateLightbox();}if(e.key==='ArrowRight'&&imageIndex<gallery.length-1){imageIndex++;updateLightbox();}});
+$('#prev-image').addEventListener('click', () => moveLightbox(-1));
+$('#next-image').addEventListener('click', () => moveLightbox(1));
+lightbox.addEventListener('keydown', event => {
+  if (lightboxViewport.contains(event.target) || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+  event.preventDefault();
+  moveLightbox(event.key === 'ArrowRight' ? 1 : -1);
+});
 $('#reload').addEventListener('click',()=>location.reload());
+const displaySettings = $('#display-settings');
+const displayPreferences = $('#display-preferences');
+const displaySettingsTrigger = $('#open-display-settings');
+const displayStorageKey = 'portfolio-display-preferences';
+
+function applyDisplayPreferences() {
+  const settings = Object.fromEntries(new FormData(displayPreferences));
+  const root = document.documentElement;
+  root.dataset.displaySize = settings.size;
+  root.dataset.displayFont = settings.font;
+  root.dataset.displayTheme = settings.theme;
+  return settings;
+}
+
+function restoreDisplayPreferences() {
+  let stored;
+  try {
+    stored = JSON.parse(localStorage.getItem(displayStorageKey));
+  } catch {
+    // Display controls also work when this browser blocks storage.
+  }
+  for (const radio of displayPreferences.querySelectorAll('input')) {
+    if (stored?.[radio.name] === radio.value) radio.checked = true;
+  }
+  applyDisplayPreferences();
+}
+
+restoreDisplayPreferences();
+displayPreferences.addEventListener('change', () => {
+  const settings = applyDisplayPreferences();
+  try {
+    localStorage.setItem(displayStorageKey, JSON.stringify(settings));
+  } catch {
+    // The selected values remain applied to this page.
+  }
+});
+$('#reset-display-settings').addEventListener('click', () => {
+  displayPreferences.reset();
+  applyDisplayPreferences();
+  try {
+    localStorage.removeItem(displayStorageKey);
+  } catch {
+    // Restoring the current page does not depend on storage.
+  }
+});
+displaySettingsTrigger.addEventListener('click', () => displaySettings.showModal());
+$('#close-display-settings').addEventListener('click', () => displaySettings.close());
+displaySettings.addEventListener('close', () => displaySettingsTrigger.focus({preventScroll:true}));
+
 async function init() {
   try {
     const res = await fetch('data/portfolio.json'); if(!res.ok) throw new Error('Content unavailable'); data = await res.json();
