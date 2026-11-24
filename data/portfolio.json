@@ -54,20 +54,18 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-collections-20261008.jpg",
-          "title": "百鉴平台场景智能体集"
+          "file": "assets/official/baijian-agent-archive-odi-20261008.png",
+          "title": "ODI备案资料智能生成",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "先判断境外直接投资的合规条件，再匹配申请材料模板。",
+          "width": 522,
+          "height": 256
         },
         {
-          "file": "assets/official/baijian-live-agents-directory-20261008.jpg",
-          "title": "百鉴专业智能体目录"
-        },
-        {
-          "file": "assets/official/baijian-platform-20261008.jpg",
-          "title": "百鉴专业服务平台首页实际截图"
-        },
-        {
-          "file": "assets/official/baijian-official-20261008.jpg",
-          "title": "百鉴官网首页实际截图"
+          "file": "assets/official/baijian-agent-official-ecommerce-20261124.jpg",
+          "title": "跨境电商合规",
+          "sourceLabel": "百鉴官网 · 公开单卡截图",
+          "description": "平台规则、产品合规、税务申报，一站核查"
         }
       ],
       "links": [
@@ -229,12 +227,12 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-set-0-20261008.jpg",
-          "title": "巴西出海智能体集页面"
-        },
-        {
-          "file": "assets/official/baijian-live-intro-site-20261008.jpg",
-          "title": "企业跨境投资选址分析介绍页"
+          "file": "assets/official/baijian-agent-archive-site-selection-20261008.png",
+          "title": "企业跨境投资选址分析",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "以企业行业、发展目标和约束条件为起点，对候选国家和地区进行多维度比较。",
+          "width": 513,
+          "height": 222
         }
       ],
       "mediaKind": "product-ui",
@@ -303,8 +301,12 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-set-7-20261008.jpg",
-          "title": "全球投资咨询智能体集页面"
+          "file": "assets/official/baijian-agent-archive-singapore-investment-20261008.png",
+          "title": "新加坡外商投资合规分析",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "围绕投资准入、主体设立、土地资产、外汇、用工、环保与税务七个模块分析项目。",
+          "width": 763,
+          "height": 150
         }
       ],
       "mediaKind": "product-ui",
@@ -362,8 +364,18 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-labor-directory-20261008.jpg",
-          "title": "海外劳动法咨询系列页面"
+          "file": "assets/official/baijian-agent-archive-brazil-labor-20261008.png",
+          "title": "巴西劳动法咨询智能体",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "面向 HR、法务与管理人员，处理雇佣、合同、工时薪酬、休假、解雇和劳动争议问题。",
+          "width": 520,
+          "height": 256
+        },
+        {
+          "file": "assets/official/baijian-agent-official-employment-20261124.jpg",
+          "title": "跨境用工合规",
+          "sourceLabel": "百鉴官网 · 公开单卡截图",
+          "description": "跨境劳动关系管理、劳动用工合规"
         }
       ],
       "mediaKind": "product-ui",
@@ -425,8 +437,12 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-set-8-20261008.jpg",
-          "title": "知识产权智能体集页面"
+          "file": "assets/official/baijian-agent-archive-singapore-patent-20261008.png",
+          "title": "新加坡专利保护智能体",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "解答专利申请路径、文件准备、加速通道、优先权、授权登记与费用等问题。",
+          "width": 763,
+          "height": 150
         }
       ],
       "mediaKind": "product-ui",
@@ -509,8 +525,12 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-privacy-directory-20261008.jpg",
-          "title": "企业出海隐私合规产品页面"
+          "file": "assets/official/baijian-agent-archive-privacy-20261008.png",
+          "title": "企业出海隐私合规",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "支持欧盟隐私合规研究，连接法律法规、监管动态与执法案例的检索和分析。",
+          "width": 520,
+          "height": 233
         }
       ],
       "mediaKind": "product-ui",
@@ -579,16 +599,24 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-set-9-20261008.jpg",
-          "title": "跨境税务智能体集页面"
+          "file": "assets/official/baijian-agent-archive-personal-tax-resident-20261008.png",
+          "title": "个人税务居民身份判断",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "结合家庭、资产、业务与生活重心，比较多地税法与税收协定，形成身份规划初案。",
+          "width": 513,
+          "height": 222
         },
         {
-          "file": "assets/official/baijian-live-intro-tax-20261008.jpg",
-          "title": "个人税务居民身份规划介绍页"
+          "file": "assets/official/baijian-agent-archive-corporate-tax-resident-20261008.png",
+          "title": "企业税务居民身份判断",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "分析企业的税务居民归属、实际管理机构与跨境税务风险。"
         },
         {
-          "file": "assets/official/baijian-live-intro-crs-20261008.jpg",
-          "title": "CRS 合规遵从介绍页"
+          "file": "assets/official/baijian-agent-archive-crs-20261008.png",
+          "title": "CRS 信息交换分析",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "梳理跨境账户及资产架构，分析信息交换、申报遗漏、身份与披露口径风险。"
         }
       ],
       "mediaKind": "product-ui",
@@ -657,12 +685,18 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-set-10-20261008.jpg",
-          "title": "出海架构与资本市场智能体集页面"
+          "file": "assets/official/baijian-agent-archive-offshore-trust-20261008.png",
+          "title": "离岸信托架构设计与搭建",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "比较离岸法域和信托架构模式，连接家族画像、资产保护、治理与合规安排。",
+          "width": 512,
+          "height": 222
         },
         {
-          "file": "assets/official/baijian-live-intro-trust-20261008.jpg",
-          "title": "离岸信托架构设计介绍页"
+          "file": "assets/official/baijian-agent-archive-investment-structure-20261008.png",
+          "title": "跨境架构·海外投资管控平台选择",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "结合企业现状、未来规划和目标市场，比较海外投资管控平台。"
         }
       ],
       "mediaKind": "product-ui",
@@ -727,12 +761,18 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-dispute-directory-20261008.jpg",
-          "title": "争议解决系列页面"
+          "file": "assets/official/baijian-agent-archive-dispute-jurisdiction-20261008.png",
+          "title": "跨境争议管辖权分析",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "区分诉讼与仲裁，分析争议解决条款、仲裁协议效力及法院管辖。",
+          "width": 520,
+          "height": 230
         },
         {
-          "file": "assets/official/baijian-live-set-14-20261008.jpg",
-          "title": "跨境争议专业智能体所在集合页面"
+          "file": "assets/official/baijian-agent-archive-dispute-enforcement-20261008.png",
+          "title": "跨境保全与执行分析",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "针对内地与香港民商事纠纷，分析保全及判决或仲裁裁决的认可执行路径。"
         }
       ],
       "mediaKind": "product-ui",
@@ -794,8 +834,12 @@
       ],
       "media": [
         {
-          "file": "assets/official/baijian-live-set-13-20261008.jpg",
-          "title": "境外土地投资智能体集页面"
+          "file": "assets/official/baijian-agent-archive-malaysia-land-20261008.png",
+          "title": "马来西亚土地投资分析",
+          "sourceLabel": "百鉴历史工作台 · 单卡截图",
+          "description": "围绕当地土地法律环境、产权取得与工业用地要求，组织投资风险分析。",
+          "width": 763,
+          "height": 150
         }
       ],
       "mediaKind": "product-ui",
@@ -1028,8 +1072,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-official-20261008.jpg",
-          "title": "赋界科技官网首页实际截图"
+          "file": "assets/official/fujie-official-feature-20261124.png",
+          "width": 760,
+          "height": 588,
+          "title": "赋界科技官网首页",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "赋界科技面向企业 AI 智能体方案与交付服务的公开官网，展示产品、解决方案、行业案例与技术能力。",
+          "compact": {
+            "file": "assets/official/fujie-official-compact-20261124.png",
+            "width": 302,
+            "height": 558
+          }
         }
       ],
       "relatedIds": [
@@ -1068,8 +1121,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-law-firm-ai-native-20261008.jpg",
-          "title": "律所 AI Native官方介绍页实际截图"
+          "file": "assets/official/fujie-law-firm-ai-native-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "律所 AI Native 产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "以案件管理和律所运营为主线，连接材料处理、AI 辅助分析、文书草稿、律师审核与团队协作。",
+          "compact": {
+            "file": "assets/official/fujie-law-firm-ai-native-compact-20261124.png",
+            "width": 302,
+            "height": 664
+          }
         }
       ],
       "keywords": "赋界 解决方案 律所 AI Native 律师事务所与专业团队"
@@ -1102,8 +1164,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-enterprise-ai-native-20261008.jpg",
-          "title": "企业 AI Native官方介绍页实际截图"
+          "file": "assets/official/fujie-enterprise-ai-native-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "企业 AI Native 产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "围绕基础经营、业务营销与品牌内容，以可组合的通用模块构建企业 AI 工作体系。",
+          "compact": {
+            "file": "assets/official/fujie-enterprise-ai-native-compact-20261124.png",
+            "width": 302,
+            "height": 684
+          }
         }
       ],
       "keywords": "赋界 解决方案 企业 AI Native 从部门任务逐步建设 AI 工作体系的企业"
@@ -1136,8 +1207,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-consumer-goods-overseas-20261008.jpg",
-          "title": "消费品企业出海服务官方介绍页实际截图"
+          "file": "assets/official/fujie-consumer-goods-overseas-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "消费品企业出海服务产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "围绕消费品海外市场拓展，把资料检索、出海任务、数据治理与专家审核连成协作流程。",
+          "compact": {
+            "file": "assets/official/fujie-consumer-goods-overseas-compact-20261124.png",
+            "width": 302,
+            "height": 658
+          }
         }
       ],
       "keywords": "赋界 解决方案 消费品企业出海服务 拓展海外市场的消费品企业"
@@ -1170,8 +1250,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-ai-marketing-engine-20261008.jpg",
-          "title": "企业营销解决方案官方介绍页实际截图"
+          "file": "assets/official/fujie-ai-marketing-engine-feature-20261124.png",
+          "width": 760,
+          "height": 778,
+          "title": "AI 营销智能体产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "组合 AI 商机雷达与营销触达，组织潜客发现、公开研究、线索验证、去重、触达准备和销售交接。",
+          "compact": {
+            "file": "assets/official/fujie-ai-marketing-engine-compact-20261124.png",
+            "width": 302,
+            "height": 714
+          }
         }
       ],
       "keywords": "赋界 解决方案 企业营销解决方案 需要持续发现、验证潜客并规范销售交接的企业团队"
@@ -1204,8 +1293,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-ai-brand-content-engine-20261008.jpg",
-          "title": "企业品牌宣传解决方案官方介绍页实际截图"
+          "file": "assets/official/fujie-ai-brand-content-engine-feature-20261124.png",
+          "width": 760,
+          "height": 778,
+          "title": "AI 品牌内容智能体产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "围绕品牌标准，组织内容策划、文案、图片与视频生成，以及人工审核、修改和定稿。",
+          "compact": {
+            "file": "assets/official/fujie-ai-brand-content-engine-compact-20261124.png",
+            "width": 302,
+            "height": 706
+          }
         }
       ],
       "keywords": "赋界 解决方案 企业品牌宣传解决方案 需要组织品牌内容生产并保留标准与审核的企业团队"
@@ -1229,8 +1327,17 @@
       "keywords": "赋界 解决方案 律所 AI Native 律师事务所与专业团队",
       "media": [
         {
-          "file": "assets/official/fujie-law-firm-ai-native-20261008.jpg",
-          "title": "律所 AI Native官方介绍页实际截图"
+          "file": "assets/official/fujie-law-firm-ai-native-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "律所 AI Native 产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "以案件管理和律所运营为主线，连接材料处理、AI 辅助分析、文书草稿、律师审核与团队协作。",
+          "compact": {
+            "file": "assets/official/fujie-law-firm-ai-native-compact-20261124.png",
+            "width": 302,
+            "height": 664
+          }
         }
       ],
       "audience": "律师事务所与专业团队",
@@ -1271,8 +1378,17 @@
       "keywords": "赋界 解决方案 企业 AI Native 从部门任务逐步建设 AI 工作体系的企业",
       "media": [
         {
-          "file": "assets/official/fujie-enterprise-ai-native-20261008.jpg",
-          "title": "企业 AI Native官方介绍页实际截图"
+          "file": "assets/official/fujie-enterprise-ai-native-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "企业 AI Native 产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "围绕基础经营、业务营销与品牌内容，以可组合的通用模块构建企业 AI 工作体系。",
+          "compact": {
+            "file": "assets/official/fujie-enterprise-ai-native-compact-20261124.png",
+            "width": 302,
+            "height": 684
+          }
         }
       ],
       "audience": "从部门任务逐步建设 AI 工作体系的企业",
@@ -1313,8 +1429,17 @@
       "keywords": "赋界 解决方案 消费品企业出海服务 拓展海外市场的消费品企业",
       "media": [
         {
-          "file": "assets/official/fujie-consumer-goods-overseas-20261008.jpg",
-          "title": "消费品企业出海服务官方介绍页实际截图"
+          "file": "assets/official/fujie-consumer-goods-overseas-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "消费品企业出海服务产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "围绕消费品海外市场拓展，把资料检索、出海任务、数据治理与专家审核连成协作流程。",
+          "compact": {
+            "file": "assets/official/fujie-consumer-goods-overseas-compact-20261124.png",
+            "width": 302,
+            "height": 658
+          }
         }
       ],
       "audience": "拓展海外市场的消费品企业",
@@ -1373,8 +1498,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-divorce-property-agreement-20261008.jpg",
-          "title": "离婚财产协议智能体产品介绍"
+          "file": "assets/official/fujie-divorce-property-agreement-feature-20261124.png",
+          "width": 760,
+          "height": 666,
+          "title": "离婚财产协议智能体产品介绍",
+          "sourceLabel": "赋界科技官网 · 实际截图",
+          "description": "通过对话整理婚姻、财产、出资与争议，追问缺失信息并形成初步分析，为协议准备和律师咨询整理事实底稿。",
+          "compact": {
+            "file": "assets/official/fujie-divorce-property-agreement-compact-20261124.png",
+            "width": 302,
+            "height": 715
+          }
         }
       ]
     },
@@ -1415,8 +1549,17 @@
       ],
       "media": [
         {
-          "file": "assets/official/fujie-legal-leads-20261008.jpg",
-          "title": "法律案源线索产品介绍"
+          "file": "assets/official/fujie-legal-leads-feature-20261124.png",
+          "width": 760,
+          "height": 448,
+          "title": "法律案源线索精选页",
+          "sourceLabel": "法律案源线索 · 公开应用截图",
+          "description": "汇集公开法律动态与事件，通过精选、热点、日报、主题和案源线索入口，支持法律信息阅读与潜在服务机会研究。",
+          "compact": {
+            "file": "assets/official/fujie-legal-leads-compact-20261124.png",
+            "width": 302,
+            "height": 822
+          }
         }
       ]
     },

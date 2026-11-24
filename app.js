@@ -9,38 +9,91 @@ let collectionLink, returnToCollection = false;
 const lightbox = $('#lightbox');
 let lightboxViewport = $('#lightbox-viewport');
 const lightboxZoom = $('#lightbox-zoom');
+const compactCaptureQuery = '(max-width: 849px)';
 function status(item) { return `<span class="status ${esc(item.statusTone || '')}">${esc(item.statusLabel)}</span>`; }
 function asset(item) { return item.media?.filter(m => localAsset(m.file)) || []; }
-function mediaMarkup(item) {
-  const images = asset(item);
+function hasCaptureDimensions(media) {
+  return Number.isInteger(media?.width) && media.width > 0 &&
+    Number.isInteger(media.height) && media.height > 0;
+}
+function compactCapture(media) {
+  return localAsset(media.compact?.file) && hasCaptureDimensions(media.compact) ? media.compact : null;
+}
+function captureImage(media) {
+  const dimensions = hasCaptureDimensions(media) ? ` width="${media.width}" height="${media.height}"` : '';
+  const image = `<img src="${esc(media.file)}" alt="${esc(media.title)}" loading="lazy"${dimensions}>`;
+  const compact = compactCapture(media);
+  if (!compact) return image;
+  return `<picture class="responsive-capture" style="--compact-capture-width: ${compact.width}px">
+    <source media="${compactCaptureQuery}" srcset="${esc(compact.file)}" width="${compact.width}" height="${compact.height}">
+    ${image}
+  </picture>`;
+}
+function mediaMarkup(item, images) {
   if (item.type === 'miniprogram') return `<div class="mini-visual"><span>WEIXIN MINI PROGRAM</span><strong>包晴天<br>微信小程序</strong><small>微信法律服务入口 · 此处为文字展示，非界面截图</small></div>`;
   if (images.length) {
     const isApp = item.type === 'app';
     const variant = isApp ? (item.id.includes('lawyer') ? 'apps lawyer' : 'apps') : item.mediaKind === 'product-photo' ? 'product-photo' : 'website';
-    const label = isApp ? '官方 App Store 产品图' : item.mediaKind === 'product-photo' ? '产品现场照片' : item.mediaKind === 'product-ui' ? '产品页面 · 实际截图' : '官方介绍页 · 实际截图';
+    const label = images[0].sourceLabel || (isApp ? '官方 App Store 产品图' : item.mediaKind === 'product-photo' ? '产品现场照片' : item.mediaKind === 'product-ui' ? '产品页面 · 实际截图' : '官方介绍页 · 实际截图');
     const thumbnails = images.slice(0, isApp ? 2 : 1).map(m => `<img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy">`).join('');
-    return `<div class="card-media ${variant}"><div class="card-image-stage">${thumbnails}</div><span class="media-label">${label}</span></div>`;
+    return `<div class="card-media ${variant}"><div class="card-image-stage">${thumbnails}</div><span class="media-label">${esc(label)}</span></div>`;
   }
   return `<div class="agent-visual"><span class="visual-index">${esc(item.visualLabel || typeNames[item.type])}</span><strong>${esc(item.visualTitle || item.title)}</strong><small>${item.pending ? '素材待补 · 此处为视觉占位' : '场景索引 · 此处为文字示意，非产品界面'}</small></div>`;
 }
+function coverMarkup(item, images, cover) {
+  if (!cover) {
+    return `<a href="#work/${esc(item.id)}" aria-label="查看${esc(item.title)}详情">${mediaMarkup(item, images)}</a>`;
+  }
+  return `<div class="agent-cover">
+    <div class="agent-cover-stage" role="region" tabindex="-1" aria-label="${esc(cover.title)}截图">
+      ${captureImage(cover)}
+    </div>
+    <p class="agent-cover-pan" id="agent-cover-pan-${esc(item.id)}" hidden>左右滑动或用方向键查看全图</p>
+    <div class="agent-cover-toolbar">
+      <div>
+        <strong class="agent-cover-title">${esc(cover.title)}</strong>
+        <p class="agent-cover-source">${esc(cover.sourceLabel)}</p>
+      </div>
+      <button class="agent-cover-preview" type="button" data-gallery-project="${esc(item.id)}"
+        aria-label="查看${esc(cover.title)}原图" aria-haspopup="dialog" aria-controls="lightbox">查看原图</button>
+    </div>
+  </div>`;
+}
+const coverObserver = new ResizeObserver(entries => {
+  for (const {target: stage} of entries) {
+    const scrollable = stage.clientWidth > 0 && stage.scrollWidth > stage.clientWidth;
+    const hint = stage.nextElementSibling;
+    hint.hidden = !scrollable;
+    stage.tabIndex = scrollable ? 0 : -1;
+    if (scrollable) stage.setAttribute('aria-describedby', hint.id);
+    else stage.removeAttribute('aria-describedby');
+  }
+});
 function wechatMarkup(item) {
   if (item.type !== 'miniprogram') return '';
   return `<section class="wechat-access"><h2>在微信中打开</h2><p>复制小程序链接，粘贴到微信后打开包晴天。</p><code class="wechat-share-code">${esc(item.wechatShareCode || '')}</code><button class="button wechat-copy" type="button">复制小程序链接 <span>↗</span></button><p class="wechat-copy-status" role="status" aria-live="polite"></p><small>也可在微信的发现页面进入小程序，搜索“${esc(item.wechatName)}”。</small></section>`;
 }
 function card(item) {
-  return `<article class="project-card ${item.pending ? 'pending-card' : ''}" data-project="${esc(item.id)}"><a href="#work/${esc(item.id)}" aria-label="查看${esc(item.title)}详情">${mediaMarkup(item)}</a><div class="card-body"><div class="card-meta"><span class="card-type">${esc(typeNames[item.type])}</span>${status(item)}</div><h3 class="card-title"><a href="#work/${esc(item.id)}">${esc(item.title)}</a></h3><p class="card-description">${esc(item.summary)}</p><div class="card-footer"><span>${esc(item.cardNote)}</span><a href="#work/${esc(item.id)}" aria-label="查看${esc(item.title)}详情">查看详情 <span aria-hidden="true">↗</span></a></div></div></article>`;
+  const images = asset(item);
+  const first = images[0];
+  const cover = first?.sourceLabel && hasCaptureDimensions(first) ? first : null;
+  const captureClass = cover ? (cover.width > 540 ? 'agent-capture-project agent-capture-wide' : 'agent-capture-project') : '';
+  return `<article class="project-card ${item.pending ? 'pending-card' : ''} ${captureClass}" data-project="${esc(item.id)}">${coverMarkup(item, images, cover)}<div class="card-body"><div class="card-meta"><span class="card-type">${esc(typeNames[item.type])}</span>${status(item)}</div><h3 class="card-title"><a href="#work/${esc(item.id)}">${esc(item.title)}</a></h3><p class="card-description">${esc(item.summary)}</p><div class="card-footer"><span>${esc(item.cardNote)}</span><a href="#work/${esc(item.id)}" aria-label="查看${esc(item.title)}详情">查看详情 <span aria-hidden="true">↗</span></a></div></div></article>`;
 }
 function renderCollection() {
   const list = data.projects.filter(p => (companyFilter === 'all' || p.company === companyFilter) && (typeFilter === 'all' || p.type === typeFilter) && (!search || `${p.title} ${p.summary} ${p.audience || ''} ${p.keywords || ''}`.toLowerCase().includes(search.toLowerCase())));
   $('#result-label').textContent = `${companyFilter === 'all' ? '全部公司' : data.companies.find(c => c.id === companyFilter).name} · ${list.length} 项成果`;
   $('#reset-filters').hidden = companyFilter === 'all' && typeFilter === 'all' && !search;
   $('#empty-state').hidden = list.length > 0;
+  coverObserver.disconnect();
   $('#collection').innerHTML = data.companies.map((c,i) => {
     const items = list.filter(p => p.company === c.id);
     if (!items.length) return '';
     const main = items.filter(p => !p.parent), agents = items.filter(p => p.parent);
-    return `<section class="company-block" aria-labelledby="company-${esc(c.id)}"><div class="company-heading"><span class="company-number">0${i+1}</span><h3 id="company-${esc(c.id)}">${esc(c.name)}</h3><p>${esc(c.shortIntro)}</p></div>${c.productDelivery ? `<p class="company-contribution">${esc(c.productDelivery)}</p>` : ''}${c.achievement ? `<div class="company-achievement"><strong>${esc(c.achievement.value)}<small>${esc(c.achievement.unit)}</small></strong><div><h4>${esc(c.achievement.label)}</h4><p>${esc(c.achievement.description)}</p></div></div>` : ''}${main.length ? `<div class="project-grid">${main.map(card).join('')}</div>` : ''}${agents.length ? `<div class="project-grid">${agents.map(card).join('')}</div>` : ''}</section>`;
+    const gridClass = c.id === 'bairong' || c.id === 'fujie' ? 'project-grid capture-grid' : 'project-grid';
+    return `<section class="company-block" aria-labelledby="company-${esc(c.id)}"><div class="company-heading"><span class="company-number">0${i+1}</span><h3 id="company-${esc(c.id)}">${esc(c.name)}</h3><p>${esc(c.shortIntro)}</p></div>${c.productDelivery ? `<p class="company-contribution">${esc(c.productDelivery)}</p>` : ''}${c.achievement ? `<div class="company-achievement"><strong>${esc(c.achievement.value)}<small>${esc(c.achievement.unit)}</small></strong><div><h4>${esc(c.achievement.label)}</h4><p>${esc(c.achievement.description)}</p></div></div>` : ''}${main.length ? `<div class="${gridClass}">${main.map(card).join('')}</div>` : ''}${agents.length ? `<div class="${gridClass}">${agents.map(card).join('')}</div>` : ''}</section>`;
   }).join('');
+  document.querySelectorAll('#collection .agent-cover-stage').forEach(stage => coverObserver.observe(stage));
   document.querySelectorAll('#company-filters button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.company === companyFilter)));
 }
 function resetFilters() { companyFilter = 'all'; typeFilter = 'all'; search = ''; $('#type-filter').value = 'all'; $('#search').value = ''; renderCollection(); }
@@ -57,6 +110,14 @@ function platformCollectionsMarkup(item) {
   if (!item.platformCollections?.length) return '';
   return `<section class="platform-collections"><h2>平台场景智能体集</h2><p>按目的地与业务场景组织专业能力，进入集合后匹配该场景内的智能体。</p><div class="platform-collection-grid">${item.platformCollections.map(c => `<article><h3>${esc(c.title)}</h3><p>${esc(c.description)}</p><a href="${esc(external(c.url))}" target="_blank" rel="noopener noreferrer">在平台查看 ↗</a></article>`).join('')}</div></section>`;
 }
+function mediaCaption(media) {
+  if (!media.sourceLabel) return `<figcaption>${esc(media.title)}</figcaption>`;
+  return `<figcaption class="agent-capture-caption">
+    <strong>${esc(media.title)}</strong>
+    <span>${esc(media.description)}</span>
+    <small>${esc(media.sourceLabel)}</small>
+  </figcaption>`;
+}
 function renderDetail(item) {
   const company = data.companies.find(c => c.id === item.company), images = asset(item), children = data.projects.filter(p => p.parent === item.id);
   const links = (item.links || []).filter(l => external(l.url));
@@ -65,14 +126,9 @@ function renderDetail(item) {
   if (contribution.length) blocks.push(['我的负责范围',contribution]);
   if (item.accessNotes) blocks.push(['使用方式',item.accessNotes]);
   const related = (item.relatedIds || []).map(id => data.projects.find(p => p.id === id)).filter(Boolean);
-  $('#detail-view').innerHTML = `<a href="#works" class="detail-back">← 返回成果作品</a><div class="detail-top ${!links.length ? 'without-entry' : ''}"><div><p class="detail-kicker">${esc(company.name)} / ${esc(typeNames[item.type])}${item.parent ? ' / 百鉴平台下的智能体集' : ''}</p><h1 id="detail-title" tabindex="-1">${esc(item.title)}</h1><p class="detail-lead">${esc(item.summary)}</p>${storeMarkup(item)}${wechatMarkup(item)}</div>${links.length ? `<aside class="detail-state" aria-label="产品入口"><p class="state-name">产品入口</p>${status(item)}<div class="detail-actions">${links.map(l => `<a class="button primary" href="${esc(external(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label)} <span>↗</span></a>`).join('')}</div></aside>` : ''}</div><div class="detail-grid public-detail-grid"><div class="detail-content">${blocks.map(([title,body]) => `<section><h2>${title}</h2>${Array.isArray(body) ? `<ul>${body.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : `<p>${esc(body)}</p>`}</section>`).join('')}${agentExamplesMarkup(item)}${platformCollectionsMarkup(item)}${images.length ? `<section><h2>产品展示</h2><p class="gallery-help">打开图片预览，可切换原尺寸查看细节。</p><div class="detail-gallery">${images.map((m,i) => `<figure class="media-item ${item.type !== 'app' ? 'wide' : ''}"><button data-image-index="${i}" aria-label="放大${esc(m.title)}"><img src="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy"></button><figcaption>${esc(m.title)}</figcaption></figure>`).join('')}</div></section>` : ''}${children.length ? `<section><h2>平台下的智能体集</h2><div class="related-links">${children.map(c => `<a href="#work/${esc(c.id)}">${esc(c.title)} ↗</a>`).join('')}</div></section>` : ''}${related.length ? `<section><h2>相关成果</h2><div class="related-links">${related.map(p => `<a href="#work/${esc(p.id)}">${esc(p.title)} ↗</a>`).join('')}</div></section>` : ''}</div></div>`;
+  $('#detail-view').innerHTML = `<a href="#works" class="detail-back">← 返回成果作品</a><div class="detail-top ${!links.length ? 'without-entry' : ''}"><div><p class="detail-kicker">${esc(company.name)} / ${esc(typeNames[item.type])}${item.parent ? ' / 百鉴平台下的智能体集' : ''}</p><h1 id="detail-title" tabindex="-1">${esc(item.title)}</h1><p class="detail-lead">${esc(item.summary)}</p>${storeMarkup(item)}${wechatMarkup(item)}</div>${links.length ? `<aside class="detail-state" aria-label="产品入口"><p class="state-name">产品入口</p>${status(item)}<div class="detail-actions">${links.map(l => `<a class="button primary" href="${esc(external(l.url))}" target="_blank" rel="noopener noreferrer">${esc(l.label)} <span>↗</span></a>`).join('')}</div></aside>` : ''}</div><div class="detail-grid public-detail-grid"><div class="detail-content">${blocks.map(([title,body]) => `<section><h2>${title}</h2>${Array.isArray(body) ? `<ul>${body.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : `<p>${esc(body)}</p>`}</section>`).join('')}${agentExamplesMarkup(item)}${platformCollectionsMarkup(item)}${images.length ? `<section><h2>产品展示</h2><p class="gallery-help">打开图片预览，可切换原尺寸查看细节。</p><div class="detail-gallery">${images.map((m,i) => `<figure class="media-item ${item.type !== 'app' ? 'wide' : ''}"><button data-image-index="${i}" aria-label="放大${esc(m.title)}">${captureImage(m)}</button>${mediaCaption(m)}</figure>`).join('')}</div></section>` : ''}${children.length ? `<section><h2>平台下的智能体集</h2><div class="related-links">${children.map(c => `<a href="#work/${esc(c.id)}">${esc(c.title)} ↗</a>`).join('')}</div></section>` : ''}${related.length ? `<section><h2>相关成果</h2><div class="related-links">${related.map(p => `<a href="#work/${esc(p.id)}">${esc(p.title)} ↗</a>`).join('')}</div></section>` : ''}</div></div>`;
   $('#detail-view').querySelectorAll('[data-image-index]').forEach(b => b.addEventListener('click', () => {
-    gallery = images;
-    imageIndex = Number(b.dataset.imageIndex);
-    lastImageTrigger = b;
-    setOriginalSize(false);
-    updateLightbox();
-    lightbox.showModal();
+    openLightbox(images, Number(b.dataset.imageIndex), b);
   }));
   const copyButton = $('#detail-view').querySelector('.wechat-copy');
   if (copyButton) copyButton.addEventListener('click', async () => {
@@ -114,8 +170,25 @@ $('#main').addEventListener('click', event => {
   if (link?.matches('#collection .project-card a[href^="#work/"]')) collectionLink = link;
   if (link?.matches('#detail-view .detail-back')) returnToCollection = true;
 });
+$('#collection').addEventListener('click', event => {
+  const trigger = event.target.closest('[data-gallery-project]');
+  if (!trigger) return;
+  const project = data.projects.find(item => item.id === trigger.dataset.galleryProject);
+  if (project) openLightbox(asset(project), 0, trigger, true);
+});
+function openLightbox(images, index, trigger, original = false) {
+  gallery = images;
+  imageIndex = index;
+  lastImageTrigger = trigger;
+  setOriginalSize(original);
+  updateLightbox();
+  lightbox.showModal();
+  if (original) lightboxViewport.focus({preventScroll:true});
+}
 function updateLightbox() {
-  const m = gallery[imageIndex]; $('#lightbox-img').src = localAsset(m.file); $('#lightbox-img').alt = m.title; $('#lightbox-title').textContent = m.title;
+  const m = gallery[imageIndex];
+  const source = matchMedia(compactCaptureQuery).matches ? compactCapture(m) || m : m;
+  $('#lightbox-img').src = localAsset(source.file); $('#lightbox-img').alt = m.title; $('#lightbox-title').textContent = m.title;
   $('#lightbox-caption').textContent = `${imageIndex+1} / ${gallery.length}`;
   $('#prev-image').disabled = imageIndex===0; $('#next-image').disabled = imageIndex===gallery.length-1;
   lightboxViewport.scrollTo({left:0, top:0, behavior:'instant'});
